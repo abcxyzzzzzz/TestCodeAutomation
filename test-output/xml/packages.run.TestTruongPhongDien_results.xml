@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="8.631">
+           time="16.175">
   <properties />
   
   
-            <testcase name="loginTest" time="5.254" classname="packages.run.TestTruongPhongDien" />
-                <testcase name="chuyenTiepTickket" time="3.377" classname="packages.run.TestTruongPhongDien" />
+            <testcase name="chuyenTiepTickket" time="10.733" classname="packages.run.TestTruongPhongDien" />
+                <testcase name="loginTest" time="5.442" classname="packages.run.TestTruongPhongDien" />
       
 </testsuite>

@@ -49,41 +49,47 @@ public class TestTruongPhongDien {
         TestUtils.doubleClickElement(driver, tElement);
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-        int numChuyenTiep = 3;
+        int numChuyenTiep = 1;
         switch (numChuyenTiep) {
             case 1:
                 driver.findElement(PageLocators.TICKET_CAN_DUYET).click();
                 WebElement tenNhanVienYC = driver.findElement(PageLocators.TEN_NHAN_VIEN_THUC_HIEN);
                 tenNhanVienYC.click();
-                tenNhanVienYC.sendKeys("Lê Hữu Phước");
+                tenNhanVienYC.sendKeys("Nhân viên điện");
                 Thread.sleep(1000);
                 tenNhanVienYC.sendKeys(Keys.ENTER);
-                driver.findElement(PageLocators.GHI_CHU_LY_DO_TRUONG_PHONG)
+                driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn có thể thực hiện được");
-                // driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                        Thread.sleep(2000);
+                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
             case 2:
                 driver.findElement(PageLocators.TICKET_KHONG_CAN_DUYET).click();
                 WebElement tenNhanVien = driver.findElement(PageLocators.TEN_NHAN_VIEN_THUC_HIEN);
                 tenNhanVien.click();
-                tenNhanVien.sendKeys("Lê Hữu Phước");
+                tenNhanVien.sendKeys("Nhân viên điện");
                 Thread.sleep(1000);
                 tenNhanVien.sendKeys(Keys.ENTER);
-                driver.findElement(PageLocators.GHI_CHU_LY_DO_TRUONG_PHONG)
+                driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn có thể thực hiện được");
-                // driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                        Thread.sleep(2000);
+                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
             case 3:
                 driver.findElement(PageLocators.TICKET_TU_CHOI).click();
-                WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO_TRUONG_PHONG);
+                WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
                 reasonCancel.click();
                 reasonCancel.sendKeys("Tôi không có nhân viên nào có thể thực hiện yêu cầu này");
-                // driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                Thread.sleep(2000);
+                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
         }
+        Thread.sleep(4000);
+
     }
+    
     @AfterTest
     public void tearDown() {
-        // driver.quit();
+        driver.quit();
     }
 }

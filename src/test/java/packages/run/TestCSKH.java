@@ -93,11 +93,13 @@ public class TestCSKH {
         Thread.sleep(2000);
 
         // Chuyển tiếp
-        // driver.findElement(PageLocators.SAVE_FORWARD_BUTTON).click();
+        driver.findElement(PageLocators.SAVE_FORWARD_BUTTON).click();
+        Thread.sleep(4000);
+
     }
 
     @AfterTest
     public void tearDown() {
-        // driver.close();
+        driver.quit();
     }
 }
