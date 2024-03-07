@@ -12,15 +12,166 @@
 <body>
 <h1>Sample Test Case</h1>
 <p>
-  Test duration: 122.429s
+  Test duration: 147.841s
 </p>
 
 
 
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">packages.CSKH.DuyetTicketTraVe</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  createTicketTest
+      </td>
+  <td class="duration">
+    0.016s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
+from unknown error: web view not found<br/>
+&nbsp; (Session info: chrome=122.0.6261.111)<br/>
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
+Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
+Command: [bf7203dd863e97ee59c2f33c308fd18b, findElement {value=//a[@href=&apos;/ticket-manager&apos;], using=xpath}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.111, chrome: {chromedriverVersion: 122.0.6261.94 (880dbf29479c..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57891}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57891/devtoo..., se:cdpVersion: 122.0.6261.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: bf7203dd863e97ee59c2f33c308fd18b</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
+              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
+              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br />
+              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br />
+              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
+              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
+              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
+              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
+              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
+              packages.CSKH.DuyetTicketTraVe.createTicketTest(DuyetTicketTraVe.java:45)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:766)<br />
+              org.testng.TestRunner.run(TestRunner.java:587)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:384)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:286)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1109)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1039)<br />
+              org.testng.TestNG.run(TestNG.java:1007)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
+                </div>
+      </td>
+</tr>
+          <tr>
+        <td colspan="3" class="group">packages.TruongPhong.TruongPhongDienDuyetTicket</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  duyetTicket
+      </td>
+  <td class="duration">
+    11.292s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[contains(text(),&apos;Duyệt&apos;)]<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
+Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
+Driver info: driver.version: RemoteWebDriver</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)<br />
+              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
+              packages.TruongPhong.TruongPhongDienDuyetTicket.duyetTicket(TruongPhongDienDuyetTicket.java:55)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br />
+              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br />
+              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br />
+              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
+              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br />
+              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:766)<br />
+              org.testng.TestRunner.run(TestRunner.java:587)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:384)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:286)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1109)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1039)<br />
+              org.testng.TestNG.run(TestNG.java:1007)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
+                </div>
+      </td>
+</tr>
+      </table>
 
 
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">packages.CSKH.DuyetTicketTraVe</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  loginTest
+      </td>
+  <td class="duration">
+    5.515s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
           <tr>
         <td colspan="3" class="group">packages.CSKH.TestCSKH</td>
       </tr>
@@ -30,7 +181,7 @@
                   createTicketTest
       </td>
   <td class="duration">
-    14.290s
+    13.953s
   </td>
   <td class="result">
         
@@ -44,7 +195,7 @@
                   loginTest
       </td>
   <td class="duration">
-    5.376s
+    5.306s
   </td>
   <td class="result">
         
@@ -62,7 +213,7 @@
                   loginTest
       </td>
   <td class="duration">
-    5.297s
+    5.376s
   </td>
   <td class="result">
         
@@ -76,7 +227,7 @@
                   tiepNhanTicket
       </td>
   <td class="duration">
-    18.210s
+    18.828s
   </td>
   <td class="result">
         
@@ -94,7 +245,7 @@
                   chuyenTiepTickket
       </td>
   <td class="duration">
-    10.786s
+    10.910s
   </td>
   <td class="result">
         
@@ -108,7 +259,7 @@
                   loginTest
       </td>
   <td class="duration">
-    5.411s
+    5.429s
   </td>
   <td class="result">
         
@@ -123,24 +274,10 @@
             
 <tr>
   <td class="method">
-                  duyetTicket
-      </td>
-  <td class="duration">
-    9.762s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
                   loginTest
       </td>
   <td class="duration">
-    5.371s
+    5.306s
   </td>
   <td class="result">
         

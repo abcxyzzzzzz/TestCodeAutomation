@@ -10,6 +10,7 @@
             <class name="packages.TruongPhong.TestTruongPhongDien"/>
             <class name="packages.NhanVien.TestNhanVienDien"/>
             <class name="packages.TruongPhong.TruongPhongDienDuyetTicket"/>
+            <class name="packages.CSKH.DuyetTicketTraVe"/>
         </classes>
     </test>
 </suite>

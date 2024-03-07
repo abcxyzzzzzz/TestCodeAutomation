@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import packages.locators.PageLocators;
 
 import java.time.Duration;
 
@@ -21,7 +23,6 @@ public class LoginPage {
 
         WebElement passwordField = driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']"));
         passwordField.sendKeys(password);
-
         driver.findElement(By.xpath("//button[@type='button']")).click();
     }
 }

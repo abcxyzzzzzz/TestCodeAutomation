@@ -11,6 +11,8 @@ public class PageLocators {
     public static final By TICKET_CHUYEN_NHAN_VIEN = By.xpath("//button[contains(text(),'Hành động')]"); 
     public static final By TICKET_CAN_DUYET = By.xpath("//div[@class='generateActionWF']//button[1]//div[1]");
     public static final By GHI_CHU_LY_DO = By.xpath("//textarea[@placeholder='Nhập Ghi chú / Lý do ...']");
+    public static final By KEY_TEST_LOGIN = By.xpath("//div[@role='alert']");
+
 
     //Chăm sóc khách hàng
     public static final By TICKET_MANAGER_LINK = By.xpath("//a[@href='/ticket-manager']");
@@ -25,6 +27,8 @@ public class PageLocators {
     public static final By PRIORITY_SELECT = By.xpath("//input[@id='react-select-9-input']");
     public static final By AGENT_NOTE_FIELD = By.xpath("//textarea[@placeholder='Nhập Agent ghi chú ...']");
     public static final By TICKET_CONTENT_FIELD = By.xpath("//textarea[@placeholder='Nhập Nội dung ...']");
+    public static final By TICKET_CUA_TOI_CSKH = By.xpath("//a[@data-href='/ticket-runtime/create___/ticket-runtime/detail___/ticket-runtime/update']");
+
 
     //Trưởng phòng điện
     public static final By YEU_CAU_DICH_VU = By.xpath("/html/body/div[1]/div[6]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/ul/li[3]/a");
@@ -34,7 +38,7 @@ public class PageLocators {
     public static final By TICKET_DUYET_TRA_VE  = By.xpath("//div[contains(text(),'Duyệt')]");
     public static final By TICKET_TU_CHOI_TRA_VE  = By.xpath("//div[contains(text(),'Từ chối')]");
     public static final By KIEM_TRA_TRANG_THAI  = By.xpath("(//td[@data-pin='none'])[9]");
-    public static final By DANH_SACH_TICKET  = By.xpath("(//li[@class='mm-active'])[2]");
+
 
     //NhanVien
     public static final By YEU_CAU_DV_NV  = By.xpath("//li[4]");

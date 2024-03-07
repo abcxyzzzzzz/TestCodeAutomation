@@ -19,6 +19,7 @@ import packages.utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class TestTruongPhongDien {
     WebDriver driver;
     LoginPage loginPage;
@@ -40,6 +41,7 @@ public class TestTruongPhongDien {
     public void loginTest() throws InterruptedException {
         loginPage.login("truongphongdien@qtsc.com.vn", "truongphongdien");
         Thread.sleep(5000);
+
     }
 
     @Test(dependsOnMethods = "loginTest")
