@@ -1,4 +1,4 @@
-package packages.run;
+package packages.CSKH;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

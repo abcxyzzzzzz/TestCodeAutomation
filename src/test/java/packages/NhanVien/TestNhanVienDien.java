@@ -1,4 +1,4 @@
-package packages.run;
+package packages.NhanVien;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -68,15 +68,12 @@ public class TestNhanVienDien {
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
         Thread.sleep(5000);
-        WebElement truocXuLy = driver.findElement(PageLocators.TRUOC_XU_LY);
-        truocXuLy.click();
-        truocXuLy.sendKeys("Kết quả trước khi thực hiện hành động");
-        Thread.sleep(1000);
+        driver.findElement(PageLocators.TRUOC_XU_LY).click();;
+        TestUtils.fillInputField(driver, PageLocators.TRUOC_XU_LY, "Kết quả trước khi thực hiện hành động");
         driver.findElement(PageLocators.UPDATE_KQ_TRUOC_XU_LY).click();
         Thread.sleep(1000);
-        WebElement sauXuLy = driver.findElement(PageLocators.SAU_XU_LY);
-        sauXuLy.click();
-        sauXuLy.sendKeys("Kết quả sau khi thực hiện hành động");
+        driver.findElement(PageLocators.SAU_XU_LY).click();
+        TestUtils.fillInputField(driver,PageLocators.SAU_XU_LY,"Kết quả sau khi thực hiện hành động");
         Thread.sleep(1000);
         driver.findElement(PageLocators.UPDATE_KQ_SAU_XU_LY).click();
         Thread.sleep(4000);

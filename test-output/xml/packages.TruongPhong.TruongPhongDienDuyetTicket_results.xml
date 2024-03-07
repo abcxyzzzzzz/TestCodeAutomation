@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sample Test Case"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.341">
+  <properties />
+  
+  
+            <testcase name="duyetTicket" time="9.935" classname="packages.TruongPhong.TruongPhongDienDuyetTicket" />
+                <testcase name="loginTest" time="5.406" classname="packages.TruongPhong.TruongPhongDienDuyetTicket" />
+      
+</testsuite>
