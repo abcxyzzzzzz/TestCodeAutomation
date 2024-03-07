@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sample Test Case"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="19.936">
+  <properties />
+  
+  
+            <testcase name="loginTest" time="5.310" classname="packages.CSKH.TestCSKH" />
+                <testcase name="createTicketTest" time="14.626" classname="packages.CSKH.TestCSKH" />
+      
+</testsuite>

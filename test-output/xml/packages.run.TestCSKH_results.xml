@@ -4,11 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.493">
+           time="19.932">
   <properties />
   
   
-            <testcase name="createTicketTest" time="10.114" classname="packages.run.TestCSKH" />
-                <testcase name="loginTest" time="5.379" classname="packages.run.TestCSKH" />
+            <testcase name="loginTest" time="5.313" classname="packages.run.TestCSKH" />
+                <testcase name="createTicketTest" time="14.619" classname="packages.run.TestCSKH" />
       
 </testsuite>
