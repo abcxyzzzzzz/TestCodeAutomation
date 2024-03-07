@@ -33,7 +33,8 @@ public class PageLocators {
     public static final By TEN_NHAN_VIEN_THUC_HIEN = By.xpath("//input[@id='react-select-32-input']");
     public static final By TICKET_DUYET_TRA_VE  = By.xpath("//div[contains(text(),'Duyệt')]");
     public static final By TICKET_TU_CHOI_TRA_VE  = By.xpath("//div[contains(text(),'Từ chối')]");
-
+    public static final By KIEM_TRA_TRANG_THAI  = By.xpath("(//td[@data-pin='none'])[9]");
+    public static final By DANH_SACH_TICKET  = By.xpath("(//li[@class='mm-active'])[2]");
 
     //NhanVien
     public static final By YEU_CAU_DV_NV  = By.xpath("//li[4]");
@@ -45,4 +46,25 @@ public class PageLocators {
     public static final By KHONG_THE_XU_LY  = By.xpath("//div[contains(text(),'Không thể xử lý')]");
     public static final By CO_THE_XU_LY  = By.xpath("//div[contains(text(),'Xử lý thành công')]");
     public static final By HANH_DONG_THUC_HIEN  = By.xpath("//div[@id='Send-Browsing']");
+
+    //Quản lý khách hàng
+    public static final By QLKH  = By.xpath("/html/body/div[1]/div[6]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/ul/li[5]/a");
+    public static final By QLCT  = By.xpath("/html/body/div[1]/div[6]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/ul/li[5]/ul/li[1]");
+    public static final By TAO_MOI_CONG_TY = By.xpath("//button[contains(text(),'Tạo mới Công ty')]");
+    //InputForm
+    public static final By INPUT_TEN_CONG_TY= By.xpath("//input[@placeholder='Nhập Tên công ty ...']");
+    public static final By INPUT_TEN_VIET_TAT= By.xpath("//input[@placeholder='Nhập Tên viết tắt ...']");
+    public static final By INPUT_TOA_NHA_DAI_DIEN= By.xpath("/html/body/div[8]/div/div[1]/div/div/div/div[2]/div/div/div[1]/div/div/div/div/div[4]/div/div[1]/div/div[1]/div[2]/input");
+    public static final By INPUT_DIA_CHI_VAN_PHONG= By.xpath("//input[@placeholder='Nhập Địa chỉ văn phòng đại diện ...']");
+    public static final By INPUT_DIA_CHI_TANG= By.xpath("//input[@placeholder='Nhập Địa chỉ tầng ...']");
+    public static final By INPUT_DIA_CHI_PHONG= By.xpath("//input[@placeholder='Nhập Địa chỉ phòng ...']");
+    public static final By INPUT_EMAIL= By.xpath("//input[@name='enterpriseInfo-email']");
+    public static final By INPUT_SDT= By.xpath("//input[@name='enterpriseInfo-phone']");
+    public static final By INPUT_LOAI_DOANH_NGHEP= By.xpath("/html/body/div[8]/div/div[1]/div/div/div/div[2]/div/div/div[4]/div/div/div/div/div[4]/div/div/div/div[1]/div[2]/input");
+    public static final By BUTTON_CLOSE = By.xpath("//button[contains(text(),'Đóng')]");
+
+    public static final By BUTTON_SAVE = By.xpath("//button[contains(text(),'Lưu')]");
+
+
+
 }

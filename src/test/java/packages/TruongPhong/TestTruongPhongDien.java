@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.v120.page.Page;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -45,6 +46,11 @@ public class TestTruongPhongDien {
     public void chuyenTiepTickket() throws InterruptedException {
         driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        //Kiểm tra trạng thái ticket
+        String textKiemTra = "Đã chuyển tiếp";
+        String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI).getText().trim();
+        Assert.assertEquals(getText, textKiemTra);
+
         WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
         TestUtils.doubleClickElement(driver, tElement);
         Thread.sleep(2000);

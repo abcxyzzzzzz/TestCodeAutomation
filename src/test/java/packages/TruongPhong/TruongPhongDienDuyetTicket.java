@@ -44,6 +44,7 @@ public class TruongPhongDienDuyetTicket {
     public void duyetTicket() throws InterruptedException {
         driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        
         WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
         TestUtils.doubleClickElement(driver, tElement);
         Thread.sleep(2000);
