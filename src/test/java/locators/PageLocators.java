@@ -1,4 +1,4 @@
-package packages.locators;
+package locators;
 
 import org.openqa.selenium.By;
 
@@ -28,6 +28,8 @@ public class PageLocators {
     public static final By AGENT_NOTE_FIELD = By.xpath("//textarea[@placeholder='Nhập Agent ghi chú ...']");
     public static final By TICKET_CONTENT_FIELD = By.xpath("//textarea[@placeholder='Nhập Nội dung ...']");
     public static final By TICKET_CUA_TOI_CSKH = By.xpath("//a[@data-href='/ticket-runtime/create___/ticket-runtime/detail___/ticket-runtime/update']");
+    public static final By DATA_TEN_CONG_TY = By.xpath("(//td[@data-pin='none'])[1]");
+
 
 
     //Trưởng phòng điện
@@ -51,10 +53,13 @@ public class PageLocators {
     public static final By CO_THE_XU_LY  = By.xpath("//div[contains(text(),'Xử lý thành công')]");
     public static final By HANH_DONG_THUC_HIEN  = By.xpath("//div[@id='Send-Browsing']");
 
+
     //Quản lý khách hàng
     public static final By QLKH  = By.xpath("/html/body/div[1]/div[6]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/ul/li[5]/a");
     public static final By QLCT  = By.xpath("/html/body/div[1]/div[6]/div[1]/div[2]/div/div[1]/div[2]/div/div/div/div/ul/li[5]/ul/li[1]");
     public static final By TAO_MOI_CONG_TY = By.xpath("//button[contains(text(),'Tạo mới Công ty')]");
+
+
     //InputForm
     public static final By INPUT_TEN_CONG_TY= By.xpath("//input[@placeholder='Nhập Tên công ty ...']");
     public static final By INPUT_TEN_VIET_TAT= By.xpath("//input[@placeholder='Nhập Tên viết tắt ...']");
@@ -66,7 +71,6 @@ public class PageLocators {
     public static final By INPUT_SDT= By.xpath("//input[@name='enterpriseInfo-phone']");
     public static final By INPUT_LOAI_DOANH_NGHEP= By.xpath("/html/body/div[8]/div/div[1]/div/div/div/div[2]/div/div/div[4]/div/div/div/div/div[4]/div/div/div/div[1]/div[2]/input");
     public static final By BUTTON_CLOSE = By.xpath("//button[contains(text(),'Đóng')]");
-
     public static final By BUTTON_SAVE = By.xpath("//button[contains(text(),'Lưu')]");
 
 
