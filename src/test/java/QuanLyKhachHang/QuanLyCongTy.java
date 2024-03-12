@@ -36,8 +36,7 @@ public class QuanLyCongTy {
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
-        Thread.sleep(5000);
+        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh1");
     }
     @Test(dependsOnMethods = "loginTest")
     public void taoCongTy() throws InterruptedException{
@@ -68,7 +67,7 @@ public class QuanLyCongTy {
         Thread.sleep(500);
         phanLoaiDoanhNghep.sendKeys(Keys.ENTER);
         driver.findElement(PageLocators.BUTTON_SAVE).click();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
         driver.findElement(PageLocators.BUTTON_CLOSE).click();
     }
     public String generateRandomEmail() {

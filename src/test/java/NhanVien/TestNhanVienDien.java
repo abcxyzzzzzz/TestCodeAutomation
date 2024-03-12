@@ -34,10 +34,9 @@ public class TestNhanVienDien {
     @Test
     public void loginTest() throws InterruptedException {
         loginPage.login("nhanviendien@qtsc.com.vn", "nhanviendien");
-        Thread.sleep(5000);
     }
 
-    @Test
+    @Test (dependsOnMethods = "loginTest")
     public void tiepNhanTicket() throws InterruptedException {
         driver.findElement(PageLocators.YEU_CAU_DV_NV).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
