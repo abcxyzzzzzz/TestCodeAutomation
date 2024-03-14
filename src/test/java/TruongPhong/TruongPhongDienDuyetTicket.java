@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
+
 public class TruongPhongDienDuyetTicket {
     WebDriver driver;
     LoginPage loginPage;
@@ -40,7 +41,7 @@ public class TruongPhongDienDuyetTicket {
     public void duyetTicket() throws InterruptedException {
         driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
-        
+
         WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
         TestUtils.doubleClickElement(driver, tElement);
         Thread.sleep(2000);
@@ -51,21 +52,21 @@ public class TruongPhongDienDuyetTicket {
                 driver.findElement(PageLocators.TICKET_DUYET_TRA_VE).click();
                 driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn có thể thực hiện được");
-                        Thread.sleep(2000);
+                Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
             case 2:
                 driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
                 driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn không thể thực hiện được");
-                        Thread.sleep(2000);
+                Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
         }
         Thread.sleep(4000);
 
     }
-    
+
     @AfterTest
     public void tearDown() {
         driver.quit();

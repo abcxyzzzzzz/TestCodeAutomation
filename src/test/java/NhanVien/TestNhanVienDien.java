@@ -83,6 +83,7 @@ public class TestNhanVienDien {
                 Thread.sleep(1000);
                 lyDoThanhCong.sendKeys("Tôi đã thực hiện yêu cầu này");
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                Thread.sleep(1000);
                 break;
 
             case 2:
@@ -93,6 +94,7 @@ public class TestNhanVienDien {
                 lyDoTuChoi.sendKeys("Tôi không thể thực hiện yêu cầu này");
                 Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                Thread.sleep(1000);
                 break;
         }
     }
@@ -109,6 +111,6 @@ public class TestNhanVienDien {
 
     @AfterTest
     public void finish() {
-        driver.quit();
+        //driver.quit();
     }
 }

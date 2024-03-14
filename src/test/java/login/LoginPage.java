@@ -22,6 +22,7 @@ public class LoginPage {
 
         WebElement passwordField = driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']"));
         passwordField.sendKeys(password);
+
         driver.findElement(By.xpath("//button[@type='button']")).click();
         Thread.sleep(5000);
         String currentUrl = driver.getCurrentUrl();
@@ -31,6 +32,5 @@ public class LoginPage {
             Assert.assertTrue( "Không phải trang Dashboard.", false);
             driver.quit();
         }
-        Thread.sleep(5000);
     }
 }

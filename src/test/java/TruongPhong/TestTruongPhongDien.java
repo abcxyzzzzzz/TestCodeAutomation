@@ -46,7 +46,6 @@ public class TestTruongPhongDien {
         driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
         //Kiểm tra trạng thái ticket
-        
         String textKiemTra = "Đã chuyển tiếp";
         String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
@@ -82,16 +81,11 @@ public class TestTruongPhongDien {
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
     public void khongTheXuLy()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_KHONG_CAN_DUYET).click();
-                WebElement tenNhanVien = driver.findElement(PageLocators.TEN_NHAN_VIEN_THUC_HIEN);
-                tenNhanVien.click();
-                tenNhanVien.sendKeys("Nhân viên điện");
-                Thread.sleep(1000);
-                tenNhanVien.sendKeys(Keys.ENTER);
-                driver.findElement(PageLocators.GHI_CHU_LY_DO)
+        TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện" );
+        driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn có thể thực hiện được");
                         Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
     public void tuChoi()throws InterruptedException{
         driver.findElement(PageLocators.TICKET_TU_CHOI).click();

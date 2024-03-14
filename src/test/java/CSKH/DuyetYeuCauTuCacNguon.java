@@ -9,7 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.v120.page.Page;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -17,7 +19,7 @@ import utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestCSKH {
+public class DuyetYeuCauTuCacNguon {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -39,39 +41,54 @@ public class TestCSKH {
     @Test
     public void loginTest() throws InterruptedException {
         loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
-        Thread.sleep(5000);
     }
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
         driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
-        driver.findElement(PageLocators.REQUEST_LIST).click();
-        driver.findElement(PageLocators.CREATE_NEW_REQUEST).click();
+        driver.findElement(PageLocators.YEU_CAU_CHO_TIEP_NHAN).click();
+        String textKiemTra = "Tạo mới";
+        String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI_YEU_CAU).getText().trim();
+        Assert.assertEquals(getText, textKiemTra);
+        WebElement select = driver.findElement(PageLocators.CLICK_DATA_TABLE);
+        TestUtils.doubleClickElement(driver,select);
+        driver.findElement(PageLocators.TIEP_NHAN_YEU_CAU).click();
         Thread.sleep(1000);
         driver.navigate().refresh();
-        WebElement tElement = driver.findElement(By.xpath("//button[@class='btn-label btn btn-info btn-sm']"));
-        tElement.click();
-        Thread.sleep(1000);
-        // Chọn đối tượng trong bảng
-        WebElement trElement = tElement.findElement(By.xpath("(//tr)[17]"));
-        TestUtils.doubleClickElement(driver, trElement);
         TestUtils.fillInputField(driver, PageLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, PageLocators.AGENT_NOTE_FIELD, "Nhanh nhất có thể nhé");
 
-        // Mức độ ưu tiên;
-        TestUtils.selectDropDow(driver,PageLocators.PRIORITY_SELECT,"Cao");
+        // Mức độ ưu tiên
+        WebElement priorityElement = driver.findElement(PageLocators.PRIORITY_SELECT);
+        priorityElement.click();
+        priorityElement.sendKeys("Cao");
+        priorityElement.sendKeys(Keys.ENTER);
 
         // Phân loại ticket
-        TestUtils.selectDropDow(driver,PageLocators.CATEGORIES_SELECT,"Yêu cầu");
+        WebElement categoriesElement = driver.findElement(PageLocators.CATEGORIES_SELECT);
+        categoriesElement.click();
+        categoriesElement.sendKeys("Yêu cầu");
+        categoriesElement.sendKeys(Keys.ENTER);
 
         // Chọn phòng ban
-        TestUtils.selectDropDow(driver,PageLocators.SELECT_DEPARTMENT,"PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
+        WebElement departmentElement = driver.findElement(PageLocators.SELECT_DEPARTMENT);
+        departmentElement.click();
+        departmentElement.sendKeys("PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
+        Thread.sleep(500);
+        departmentElement.sendKeys(Keys.ENTER);
 
         // Chọn bộ phận
-        TestUtils.selectDropDow(driver,PageLocators.SELECT_DIVISION,"điện");
+        WebElement divisionElement = driver.findElement(PageLocators.SELECT_DIVISION);
+        divisionElement.click();
+        Thread.sleep(1000);
+        divisionElement.sendKeys(Keys.ENTER);
 
         // Chọn yêu cầu dịch vụ
-        TestUtils.selectDropDow(driver,PageLocators.SELECT_REQUEST_SERVICE,"Điện áp tăng cao");
+        WebElement requestElement = driver.findElement(PageLocators.SELECT_REQUEST_SERVICE);
+        requestElement.click();
+        requestElement.sendKeys("Điện áp tăng cao");
+        Thread.sleep(2000);
+        requestElement.sendKeys(Keys.ENTER);
 
         // Tạo ticket
         driver.findElement(PageLocators.CREATE_TICKET_BUTTON).click();
@@ -85,6 +102,6 @@ public class TestCSKH {
 
     @AfterTest
     public void tearDown() {
-        driver.quit();
+            driver.quit();
     }
 }

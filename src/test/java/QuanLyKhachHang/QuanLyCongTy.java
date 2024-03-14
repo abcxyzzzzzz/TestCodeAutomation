@@ -36,7 +36,7 @@ public class QuanLyCongTy {
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh1");
+        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
     }
     @Test(dependsOnMethods = "loginTest")
     public void taoCongTy() throws InterruptedException{
@@ -44,31 +44,26 @@ public class QuanLyCongTy {
         driver.findElement(PageLocators.QLKH).click();
         driver.findElement(PageLocators.QLCT).click();
         driver.findElement(PageLocators.TAO_MOI_CONG_TY).click();
+        ChonToaNhaDaiDien();
+        //Chọn phân loại doanh nghệp
+        TestUtils.selectDropDow(driver,PageLocators.INPUT_LOAI_DOANH_NGHEP,"Trong nước" );
+        //driver.findElement(PageLocators.BUTTON_SAVE).click();
+        Thread.sleep(1000);
+        //driver.findElement(PageLocators.BUTTON_CLOSE).click();
+    }
+    public void ChonToaNhaDaiDien() throws InterruptedException{
+        //Chọn tòa nhà đại diện
         String text_CTY = generateRandomCompanyName();
         String getText = driver.findElement(PageLocators.DATA_TEN_CONG_TY).getText().trim();
         Assert.assertNotEquals(getText, text_CTY);
         TestUtils.fillInputField(driver,PageLocators.INPUT_TEN_CONG_TY,text_CTY);
         TestUtils.fillInputField(driver,PageLocators.INPUT_TEN_VIET_TAT,"nhà báo Việt Nam");
-        //Chọn tòa nhà đại diện
-        WebElement toaNhaDaiDien = driver.findElement(PageLocators.INPUT_TOA_NHA_DAI_DIEN);
-        toaNhaDaiDien.click();
-        toaNhaDaiDien.sendKeys("Trường mầm non Quang Trung");
-        Thread.sleep(500);
-        toaNhaDaiDien.sendKeys(Keys.ENTER);
+        TestUtils.selectDropDow(driver,PageLocators.INPUT_TOA_NHA_DAI_DIEN,"Trường mầm non Quang Trung" );
         TestUtils.fillInputField(driver,PageLocators.INPUT_DIA_CHI_VAN_PHONG,"456 Phan Xích Long");
         TestUtils.fillInputField(driver,PageLocators.INPUT_DIA_CHI_TANG,"Tầng 9");
         TestUtils.fillInputField(driver,PageLocators.INPUT_DIA_CHI_PHONG,"123");
-        TestUtils.fillInputField(driver,PageLocators.INPUT_EMAIL,generateRandomEmail());    
+        TestUtils.fillInputField(driver,PageLocators.INPUT_EMAIL,generateRandomEmail());
         TestUtils.fillInputField(driver,PageLocators.INPUT_SDT,generateRandomPhoneNumber());
-        //Chọn phân loại doanh nghệp
-        WebElement phanLoaiDoanhNghep = driver.findElement(PageLocators.INPUT_LOAI_DOANH_NGHEP);
-        phanLoaiDoanhNghep.click();
-        phanLoaiDoanhNghep.sendKeys("Trong nước");
-        Thread.sleep(500);
-        phanLoaiDoanhNghep.sendKeys(Keys.ENTER);
-        driver.findElement(PageLocators.BUTTON_SAVE).click();
-        Thread.sleep(1000);
-        driver.findElement(PageLocators.BUTTON_CLOSE).click();
     }
     public String generateRandomEmail() {
         return "test_account_" + Math.floor(Math.random() * 111) + "@gmail.com";
