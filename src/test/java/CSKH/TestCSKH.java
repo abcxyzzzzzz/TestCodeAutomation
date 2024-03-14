@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.v120.page.Page;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -47,33 +48,27 @@ public class TestCSKH {
         driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
         driver.findElement(PageLocators.REQUEST_LIST).click();
         driver.findElement(PageLocators.CREATE_NEW_REQUEST).click();
+        TestUtils.clickElement(driver, PageLocators.CREATE_NEW_REQUEST);
         Thread.sleep(1000);
         driver.navigate().refresh();
-        WebElement tElement = driver.findElement(By.xpath("//button[@class='btn-label btn btn-info btn-sm']"));
-        tElement.click();
+        driver.findElement(By.xpath("//button[@class='btn-label btn btn-info btn-sm']")).click();
         Thread.sleep(1000);
         // Chọn đối tượng trong bảng
-        WebElement trElement = tElement.findElement(By.xpath("(//tr)[17]"));
-        TestUtils.doubleClickElement(driver, trElement);
+        TestUtils.doubleClickElement(driver, PageLocators.DATA_BANG);
         TestUtils.fillInputField(driver, PageLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
+
         TestUtils.fillInputField(driver, PageLocators.AGENT_NOTE_FIELD, "Nhanh nhất có thể nhé");
 
-        // Mức độ ưu tiên;
         TestUtils.selectDropDow(driver,PageLocators.PRIORITY_SELECT,"Cao");
 
-        // Phân loại ticket
         TestUtils.selectDropDow(driver,PageLocators.CATEGORIES_SELECT,"Yêu cầu");
 
-        // Chọn phòng ban
         TestUtils.selectDropDow(driver,PageLocators.SELECT_DEPARTMENT,"PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
 
-        // Chọn bộ phận
         TestUtils.selectDropDow(driver,PageLocators.SELECT_DIVISION,"điện");
 
-        // Chọn yêu cầu dịch vụ
         TestUtils.selectDropDow(driver,PageLocators.SELECT_REQUEST_SERVICE,"Điện áp tăng cao");
 
-        // Tạo ticket
         driver.findElement(PageLocators.CREATE_TICKET_BUTTON).click();
         Thread.sleep(2000);
 

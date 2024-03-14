@@ -50,8 +50,7 @@ public class DuyetYeuCauTuCacNguon {
         String textKiemTra = "Tạo mới";
         String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI_YEU_CAU).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        WebElement select = driver.findElement(PageLocators.CLICK_DATA_TABLE);
-        TestUtils.doubleClickElement(driver,select);
+        TestUtils.doubleClickElement(driver,PageLocators.CLICK_DATA_TABLE);
         driver.findElement(PageLocators.TIEP_NHAN_YEU_CAU).click();
         Thread.sleep(1000);
         driver.navigate().refresh();

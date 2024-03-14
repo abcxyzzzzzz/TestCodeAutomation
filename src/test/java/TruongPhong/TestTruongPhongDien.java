@@ -50,8 +50,7 @@ public class TestTruongPhongDien {
         String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
 
-        WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
-        TestUtils.doubleClickElement(driver, tElement);
+        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         int numChuyenTiep = 1;
@@ -70,11 +69,7 @@ public class TestTruongPhongDien {
     }
     public void coTheXuLy()throws InterruptedException{
         driver.findElement(PageLocators.TICKET_CAN_DUYET).click();
-                WebElement tenNhanVienYC = driver.findElement(PageLocators.TEN_NHAN_VIEN_THUC_HIEN);
-                tenNhanVienYC.click();
-                tenNhanVienYC.sendKeys("Nhân viên điện");
-                Thread.sleep(1000);
-                tenNhanVienYC.sendKeys(Keys.ENTER);
+                TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện");
                 driver.findElement(PageLocators.GHI_CHU_LY_DO)
                         .sendKeys("Công việc bạn có thể thực hiện được");
                         Thread.sleep(2000);

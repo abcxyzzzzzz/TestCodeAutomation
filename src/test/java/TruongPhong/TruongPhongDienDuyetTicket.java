@@ -42,8 +42,7 @@ public class TruongPhongDienDuyetTicket {
         driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
 
-        WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
-        TestUtils.doubleClickElement(driver, tElement);
+        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         int numDuyet = 1;

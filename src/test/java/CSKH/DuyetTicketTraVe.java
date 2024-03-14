@@ -42,8 +42,7 @@ public class DuyetTicketTraVe {
     public void createTicketTest() throws InterruptedException {
         driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI_CSKH).click();
-        WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
-        TestUtils.doubleClickElement(driver, tElement);
+        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         Thread.sleep(1000);
         int numChuyenTiep = 1;
