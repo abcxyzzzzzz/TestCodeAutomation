@@ -6,10 +6,11 @@
     </listeners>
     <test name="Sample Test Case">
         <classes>
-            <class name="packages.CSKH.TestCSKH"/>
-            <class name="packages.TruongPhong.TestTruongPhongDien"/>
-            <class name="packages.NhanVien.TestNhanVienDien"/>
-            <class name="packages.TruongPhong.TruongPhongDienDuyetTicket"/>
+            <class name="CSKH.TestCSKH"/>
+            <class name="TruongPhong.TestTruongPhongDien"/>
+            <class name="NhanVien.TestNhanVienDien"/>
+            <class name="TruongPhong.TruongPhongDienDuyetTicket"/>
+            <class name="CSKH.DuyetTicketTraVe"/>
         </classes>
     </test>
 </suite>

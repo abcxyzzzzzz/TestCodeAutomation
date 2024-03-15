@@ -1,20 +1,16 @@
-package packages.NhanVien;
+package NhanVien;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import locators.PageLocators;
+import login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.v120.page.Page;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import packages.locators.PageLocators;
-import packages.login.LoginPage;
-import packages.utils.TestUtils;
+import utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -38,15 +34,13 @@ public class TestNhanVienDien {
     @Test
     public void loginTest() throws InterruptedException {
         loginPage.login("nhanviendien@qtsc.com.vn", "nhanviendien");
-        Thread.sleep(5000);
     }
 
-    @Test
+    @Test (dependsOnMethods = "loginTest")
     public void tiepNhanTicket() throws InterruptedException {
         driver.findElement(PageLocators.YEU_CAU_DV_NV).click();
         driver.findElement(PageLocators.TICKET_CUA_TOI).click();
-        WebElement tElement = driver.findElement(PageLocators.TICKET_HANH_DONG);
-        TestUtils.doubleClickElement(driver, tElement);
+        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         int numTiepNhan = 1;
@@ -88,6 +82,7 @@ public class TestNhanVienDien {
                 Thread.sleep(1000);
                 lyDoThanhCong.sendKeys("Tôi đã thực hiện yêu cầu này");
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                Thread.sleep(1000);
                 break;
 
             case 2:
@@ -98,10 +93,9 @@ public class TestNhanVienDien {
                 lyDoTuChoi.sendKeys("Tôi không thể thực hiện yêu cầu này");
                 Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                Thread.sleep(1000);
                 break;
         }
-        // Approve the action
-
     }
 
     private void handleRejection() throws InterruptedException {
@@ -116,6 +110,6 @@ public class TestNhanVienDien {
 
     @AfterTest
     public void finish() {
-        driver.quit();
+        //driver.quit();
     }
 }
