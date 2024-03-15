@@ -27,7 +27,9 @@ public class PageLocators {
     public static final By TICKET_CONTENT_FIELD = By.xpath("//textarea[@placeholder='Nhập Nội dung ...']");
     public static final By TICKET_CUA_TOI_CSKH = By.xpath("//a[@data-href='/ticket-runtime/create___/ticket-runtime/detail___/ticket-runtime/update']");
     public static final By DATA_TEN_CONG_TY = By.xpath("(//td[@data-pin='none'])[1]");
-    public static final By DATA_BANG = By.xpath("By.xpath(\"(//tr)[17]\"");
+    public static final By DATA_BANG = By.xpath("(//tr)[16]");
+    public static final By TIM_KIEM = By.xpath("//button[@class='btn-label btn btn-info btn-sm']");
+
 
     //Tiếp nhận yêu cầu từ các nguông
     public static final By YEU_CAU_CHO_TIEP_NHAN = By.xpath("//span[contains(text(),'Yêu cầu chờ tiếp nhận')]");

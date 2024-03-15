@@ -45,13 +45,13 @@ public class TestCSKH {
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
-        driver.findElement(PageLocators.REQUEST_LIST).click();
-        driver.findElement(PageLocators.CREATE_NEW_REQUEST).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, PageLocators.REQUEST_LIST);
         TestUtils.clickElement(driver, PageLocators.CREATE_NEW_REQUEST);
         Thread.sleep(1000);
         driver.navigate().refresh();
-        driver.findElement(By.xpath("//button[@class='btn-label btn btn-info btn-sm']")).click();
+        Thread.sleep(1000);
+        TestUtils.clickElement(driver,PageLocators.TIM_KIEM);
         Thread.sleep(1000);
         // Chọn đối tượng trong bảng
         TestUtils.doubleClickElement(driver, PageLocators.DATA_BANG);
@@ -69,11 +69,13 @@ public class TestCSKH {
 
         TestUtils.selectDropDow(driver,PageLocators.SELECT_REQUEST_SERVICE,"Điện áp tăng cao");
 
-        driver.findElement(PageLocators.CREATE_TICKET_BUTTON).click();
+        TestUtils.clickElement(driver, PageLocators.CREATE_TICKET_BUTTON);
+
         Thread.sleep(2000);
 
         // Chuyển tiếp
-        driver.findElement(PageLocators.SAVE_FORWARD_BUTTON).click();
+        TestUtils.clickElement(driver, PageLocators.SAVE_FORWARD_BUTTON);
+
         Thread.sleep(4000);
 
     }

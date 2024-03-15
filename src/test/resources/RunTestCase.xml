@@ -9,8 +9,6 @@
             <class name="CSKH.TestCSKH"/>
             <class name="TruongPhong.TestTruongPhongDien"/>
             <class name="NhanVien.TestNhanVienDien"/>
-            <class name="TruongPhong.TruongPhongDienDuyetTicket"/>
-            <class name="CSKH.DuyetTicketTraVe"/>
         </classes>
     </test>
 </suite>

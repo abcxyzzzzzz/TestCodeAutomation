@@ -22,7 +22,6 @@ public class TestUtils {
         driver.findElement(locator).click();
     }
 
-
     public static void selectDropDow( WebDriver driver, By locator, String text) throws InterruptedException{
         WebElement mauthongbao = driver.findElement(locator);
         mauthongbao.click();

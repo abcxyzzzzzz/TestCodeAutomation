@@ -3,30 +3,30 @@
            tests="2"
            failures="1"
            errors="0"
-           skipped="1"
-           time="0.017">
+           skipped="0"
+           time="12.377">
   <properties />
-            <testcase name="loginTest" time="0.017" classname="CSKH.TestCSKH">
-                <failure type="org.openqa.selenium.NoSuchWindowException"
-                  message="no such window: target window already closed
-from unknown error: web view not found
+            <testcase name="createTicketTest" time="2.049" classname="CSKH.TestCSKH">
+                <failure type="org.openqa.selenium.ElementClickInterceptedException"
+                  message="element click intercepted: Element &lt;button type=&quot;button&quot; class=&quot;btn-label btn btn-primary btn-sm&quot;&gt;...&lt;/button&gt; is not clickable at point (617, 144). Other element would receive the click: &lt;div class=&quot;mb-2 &quot;&gt;...&lt;/div&gt;
   (Session info: chrome=122.0.6261.112)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [80db8e85d444bc7ef3b69a83e25bbdfd, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63850/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 80db8e85d444bc7ef3b69a83e25bbdfd"
+Command: [9f817a8dc6fb2b13af8766cddce35a3f, clickElement {id=f.C9458F319765B519DB4A802F06F01059.d.204528A5254755139F7EDAE65A75383D.e.171}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51603}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51603/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9f817a8dc6fb2b13af8766cddce35a3f)] -&gt; xpath: //button[contains(text(),&apos;Tạo mới Yêu cầu&apos;)]]
+Session ID: 9f817a8dc6fb2b13af8766cddce35a3f"
               >
-<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn-label btn btn-primary btn-sm">...</button> is not clickable at point (617, 144). Other element would receive the click: <div class="mb-2 ">...</div>
   (Session info: chrome=122.0.6261.112)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [80db8e85d444bc7ef3b69a83e25bbdfd, findElement {using=xpath, value=//input[@placeholder='Email']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63850}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63850/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 80db8e85d444bc7ef3b69a83e25bbdfd
+Command: [9f817a8dc6fb2b13af8766cddce35a3f, clickElement {id=f.C9458F319765B519DB4A802F06F01059.d.204528A5254755139F7EDAE65A75383D.e.171}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51603}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51603/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9f817a8dc6fb2b13af8766cddce35a3f)] -> xpath: //button[contains(text(),'Tạo mới Yêu cầu')]]
+Session ID: 9f817a8dc6fb2b13af8766cddce35a3f
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -39,12 +39,10 @@ Session ID: 80db8e85d444bc7ef3b69a83e25bbdfd
   org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
   org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-  org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-  org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  login.LoginPage.login(LoginPage.java:20)
-  CSKH.TestCSKH.loginTest(TestCSKH.java:41)
+  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+  org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+  utils.TestUtils.clickElement(TestUtils.java:22)
+  CSKH.TestCSKH.createTicketTest(TestCSKH.java:51)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -77,9 +75,7 @@ Session ID: 80db8e85d444bc7ef3b69a83e25bbdfd
 
           </testcase>
   
-            <testcase name="createTicketTest" time="0.0" classname="CSKH.TestCSKH">
-          <skipped />
-    </testcase>
   
-  
+            <testcase name="loginTest" time="10.328" classname="CSKH.TestCSKH" />
+      
 </testsuite>

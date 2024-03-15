@@ -39,8 +39,8 @@ public class TruongPhongDienDuyetTicket {
 
     @Test(dependsOnMethods = "loginTest")
     public void duyetTicket() throws InterruptedException {
-        driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        TestUtils.clickElement(driver, PageLocators.YEU_CAU_DICH_VU);
+        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI);
 
         TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
@@ -48,16 +48,14 @@ public class TruongPhongDienDuyetTicket {
         int numDuyet = 1;
         switch (numDuyet) {
             case 1:
-                driver.findElement(PageLocators.TICKET_DUYET_TRA_VE).click();
-                driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn có thể thực hiện được");
+                TestUtils.clickElement(driver, PageLocators.TICKET_DUYET_TRA_VE);
+                TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Công việc bạn có thể thực hiện được");
                 Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;
             case 2:
                 driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
-                driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn không thể thực hiện được");
+                TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Công việc bạn không thể thực hiện được");
                 Thread.sleep(2000);
                 driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
                 break;

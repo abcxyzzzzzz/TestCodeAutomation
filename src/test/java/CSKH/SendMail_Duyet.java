@@ -41,6 +41,7 @@ public class SendMail_Duyet {
         loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
         Thread.sleep(5000);
     }
+    
     @Test(dependsOnMethods = "loginTest")
     public void openNewTabAndLoginToGmail() throws InterruptedException {
         ((JavascriptExecutor)driver).executeScript("window.open()");
@@ -75,8 +76,8 @@ public class SendMail_Duyet {
     
     @Test(dependsOnMethods = "sendEmailTest")
     public void createTicketTest() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI_CSKH).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI_CSKH);
         TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         Thread.sleep(1000);
@@ -98,6 +99,7 @@ public class SendMail_Duyet {
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
+    
     public void tuChoi()throws InterruptedException{
         driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
         WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
@@ -106,6 +108,7 @@ public class SendMail_Duyet {
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
+    
     @AfterTest
     public void tearDown() {
         //driver.quit();

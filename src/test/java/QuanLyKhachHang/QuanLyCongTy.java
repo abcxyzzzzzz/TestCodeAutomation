@@ -38,6 +38,7 @@ public class QuanLyCongTy {
     public void loginTest() throws InterruptedException {
         loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
     }
+
     @Test(dependsOnMethods = "loginTest")
     public void taoCongTy() throws InterruptedException{
         
@@ -51,6 +52,7 @@ public class QuanLyCongTy {
         Thread.sleep(1000);
         //driver.findElement(PageLocators.BUTTON_CLOSE).click();
     }
+    
     public void ChonToaNhaDaiDien() throws InterruptedException{
         //Chọn tòa nhà đại diện
         String text_CTY = generateRandomCompanyName();
@@ -65,9 +67,11 @@ public class QuanLyCongTy {
         TestUtils.fillInputField(driver,PageLocators.INPUT_EMAIL,generateRandomEmail());
         TestUtils.fillInputField(driver,PageLocators.INPUT_SDT,generateRandomPhoneNumber());
     }
+    
     public String generateRandomEmail() {
         return "test_account_" + Math.floor(Math.random() * 111) + "@gmail.com";
     }
+    
     public String generateRandomPhoneNumber() {
         StringBuilder phoneNumber = new StringBuilder("03");
         for (int i = 0; i < 8; i++) {
@@ -75,6 +79,7 @@ public class QuanLyCongTy {
         }
         return phoneNumber.toString();
     }
+    
     public String generateRandomCompanyName() {
         String[] words = {"ABC", "XYZ", "DEF", "GHI", "JKL", "MNO", "PQR", "STU", "VWX", "YZZ"};
         StringBuilder sb = new StringBuilder("Công ti TNHH ");
@@ -84,6 +89,7 @@ public class QuanLyCongTy {
         }
         return sb.toString().trim();
     }
+    
     @AfterTest
     public void finish() {
 

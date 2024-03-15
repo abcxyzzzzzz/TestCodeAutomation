@@ -38,11 +38,11 @@ public class TestNhanVienDien {
 
     @Test (dependsOnMethods = "loginTest")
     public void tiepNhanTicket() throws InterruptedException {
-        driver.findElement(PageLocators.YEU_CAU_DV_NV).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        TestUtils.clickElement(driver, PageLocators.YEU_CAU_DV_NV);
+        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI);
         TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_CHUYEN_NHAN_VIEN);
         int numTiepNhan = 1;
         switch (numTiepNhan) {
             case 1:
@@ -55,57 +55,46 @@ public class TestNhanVienDien {
     }
 
     private void handleApproval() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_CAN_DUYET).click();
-        WebElement lyDoDongY = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-        lyDoDongY.click();
-        lyDoDongY.sendKeys("Tôi có thể thực hiện yêu cầu này");
+        TestUtils.clickElement(driver, PageLocators.TICKET_CAN_DUYET);
+        TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Tôi có thể thực hiện yêu cầu này");
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_XAC_NHAN);
         Thread.sleep(5000);
-        driver.findElement(PageLocators.TRUOC_XU_LY).click();;
         TestUtils.fillInputField(driver, PageLocators.TRUOC_XU_LY, "Kết quả trước khi thực hiện hành động");
-        driver.findElement(PageLocators.UPDATE_KQ_TRUOC_XU_LY).click();
+        TestUtils.clickElement(driver, PageLocators.UPDATE_KQ_TRUOC_XU_LY);
         Thread.sleep(1000);
-        driver.findElement(PageLocators.SAU_XU_LY).click();
         TestUtils.fillInputField(driver,PageLocators.SAU_XU_LY,"Kết quả sau khi thực hiện hành động");
         Thread.sleep(1000);
-        driver.findElement(PageLocators.UPDATE_KQ_SAU_XU_LY).click();
+        TestUtils.clickElement(driver, PageLocators.UPDATE_KQ_SAU_XU_LY);
         Thread.sleep(4000);
 
         int thucHien = 1;
         switch (thucHien) {
             case 1:
-                driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-                driver.findElement(PageLocators.CO_THE_XU_LY).click();
-                WebElement lyDoThanhCong = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-                lyDoThanhCong.click();
-                Thread.sleep(1000);
-                lyDoThanhCong.sendKeys("Tôi đã thực hiện yêu cầu này");
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                TestUtils.clickElement(driver,PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+                TestUtils.clickElement(driver,PageLocators.CO_THE_XU_LY);
+                TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Tôi đã thực hiện yêu cầu này");
+                TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
                 Thread.sleep(1000);
                 break;
 
             case 2:
-                driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-                driver.findElement(PageLocators.KHONG_THE_XU_LY).click();
-                WebElement lyDoTuChoi = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-                lyDoTuChoi.click();
-                lyDoTuChoi.sendKeys("Tôi không thể thực hiện yêu cầu này");
-                Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+                TestUtils.clickElement(driver,PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+                TestUtils.clickElement(driver,PageLocators.KHONG_THE_XU_LY);
+                TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Tôi không thể thực hiện yêu cầu này");
+                TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
                 Thread.sleep(1000);
                 break;
         }
     }
 
     private void handleRejection() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-        driver.findElement(PageLocators.TU_CHOI_FORM_SUBMIT_NV).click();
-        WebElement lyDoTuChoi = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-        lyDoTuChoi.click();
-        lyDoTuChoi.sendKeys("Tôi không thể thực hiện yêu cầu này");
+        TestUtils.clickElement(driver,PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+        TestUtils.clickElement(driver,PageLocators.TU_CHOI_FORM_SUBMIT_NV);
+        TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO, "Tôi không thể thực hiện yêu cầu này");
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
+
     }
 
     @AfterTest

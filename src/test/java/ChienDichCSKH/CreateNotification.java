@@ -44,9 +44,9 @@ public class CreateNotification {
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
-        driver.findElement(PageLocators.NG_CHIEN_DICH).click();
-        driver.findElement(PageLocators.NG_DS_THONG_BAO).click();
-        driver.findElement(PageLocators.BUTTON_CREATE_NOTIFICATION).click();
+        TestUtils.clickElement(driver, PageLocators.NG_CHIEN_DICH);
+        TestUtils.clickElement(driver, PageLocators.NG_DS_THONG_BAO);
+        TestUtils.clickElement(driver, PageLocators.BUTTON_CREATE_NOTIFICATION);
         TestUtils.fillInputField(driver, PageLocators.NAME_NOTIFI, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, PageLocators.MA_NOTIFI, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, PageLocators.MO_TA, "Sửa chữa hệ thống điện trường học");

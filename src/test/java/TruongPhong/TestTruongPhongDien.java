@@ -43,8 +43,9 @@ public class TestTruongPhongDien {
 
     @Test(dependsOnMethods = "loginTest")
     public void chuyenTiepTickket() throws InterruptedException {
-        driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        TestUtils.clickElement(driver, PageLocators.YEU_CAU_DICH_VU);
+        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI);
+
         //Kiểm tra trạng thái ticket
         String textKiemTra = "Đã chuyển tiếp";
         String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI).getText().trim();
@@ -52,7 +53,8 @@ public class TestTruongPhongDien {
 
         TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+
         int numChuyenTiep = 1;
         switch (numChuyenTiep) {
             case 1:
@@ -68,27 +70,27 @@ public class TestTruongPhongDien {
         Thread.sleep(4000);
     }
     public void coTheXuLy()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_CAN_DUYET).click();
-                TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện");
-                driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn có thể thực hiện được");
+        TestUtils.clickElement(driver,PageLocators.TICKET_CAN_DUYET);
+        TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện");
+                TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Công việc bạn có thể thực hiện được");
                         Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
     }
+    
     public void khongTheXuLy()throws InterruptedException{
+        TestUtils.clickElement(driver,PageLocators.TICKET_KHONG_CAN_DUYET);
         TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện" );
-        driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn có thể thực hiện được");
-                        Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Công việc bạn có thể thực hiện được");
+        Thread.sleep(2000);
+        TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
+
     }
+    
     public void tuChoi()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_TU_CHOI).click();
-                WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-                reasonCancel.click();
-                reasonCancel.sendKeys("Tôi không có nhân viên nào có thể thực hiện yêu cầu này");
-                Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        TestUtils.clickElement(driver,PageLocators.TICKET_TU_CHOI);
+        TestUtils.fillInputField(driver,PageLocators.GHI_CHU_LY_DO,"Tôi không có nhân viên nào có thể thực hiện yêu cầu này");
+        Thread.sleep(2000);
+        TestUtils.clickElement(driver,PageLocators.TICKET_XAC_NHAN);
     }
     
     @AfterTest

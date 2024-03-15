@@ -40,10 +40,11 @@ public class DuyetTicketTraVe {
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI_CSKH).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI_CSKH);
         TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        TestUtils.clickElement(driver, PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+
         Thread.sleep(1000);
         int numChuyenTiep = 1;
         switch (numChuyenTiep) {
@@ -58,21 +59,18 @@ public class DuyetTicketTraVe {
 
     public void Duyet()throws InterruptedException{
         driver.findElement(PageLocators.TICKET_DUYET_TRA_VE).click();
-        WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
         TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Duyệt");
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
     public void tuChoi()throws InterruptedException{
         driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
-        WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
         TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Từ chối");
-        Thread.sleep(2000);
         Thread.sleep(2000);
         driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
     }
     @AfterTest
     public void tearDown() {
-        //driver.quit();
+        driver.quit();
     }
 }
