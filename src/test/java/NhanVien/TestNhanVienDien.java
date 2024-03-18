@@ -1,5 +1,6 @@
 package NhanVien;
 
+import locators.ElectricManager;
 import locators.EmployssLocators;
 import approval.NhanVien.DongYYeuCau;
 import locators.PublicLocators;
@@ -24,14 +25,15 @@ public class TestNhanVienDien {
     }
 
     @Test
-    public void loginTest() throws InterruptedException {
+    public void loginTest(WebDriver driver) throws InterruptedException {
         LoginPage.login(driver, "nhanviendien@qtsc.com.vn", "nhanviendien");
-        Thread.sleep(5000);
     }
     @Test (dependsOnMethods = "loginTest")
-    public void tiepNhanTicket() throws InterruptedException {
+    public void tiepNhanTicket(WebDriver driver, String MaTicket) throws InterruptedException {
         TestUtils.clickElement(driver, EmployssLocators.YEU_CAU_DV_NV);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.fillInputField(driver, ElectricManager.IN_PUT ,MaTicket);
+        Thread.sleep(1000);
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);

@@ -10,4 +10,5 @@ public class ElectricManager {
     public static final By TICKET_DUYET_TRA_VE  = By.xpath("//div[contains(text(),'Duyệt')]");
     public static final By TICKET_TU_CHOI_TRA_VE  = By.xpath("//div[contains(text(),'Từ chối')]");
     public static final By KIEM_TRA_TRANG_THAI  = By.xpath("(//td[@data-pin='none'])[9]");
+    public static final By IN_PUT  = By.xpath("(//input[contains(@placeholder,'...')])[2]");
 }
