@@ -12,10 +12,12 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
+import approval.CSKH.Duyet;
+import approval.CSKH.TuChoi;
 
 import java.util.concurrent.TimeUnit;
 
-public class Approval_Ticket_Return {
+public class DuyetTicketTraVe {
     WebDriver driver;
     @BeforeTest
     public void setup() {
@@ -40,28 +42,7 @@ public class Approval_Ticket_Return {
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
 
         Thread.sleep(1000);
-        int numChuyenTiep = 1;
-        switch (numChuyenTiep) {
-            case 1:
-                Duyet();
-                break;
-            case 2:
-                tuChoi();
-                break;
-        }
-    }
-
-    public void Duyet()throws InterruptedException{
-        driver.findElement(CSKHLocators.TICKET_DUYET_TRA_VE).click();
-        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Duyệt");
-        Thread.sleep(2000);
-        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
-    }
-    public void tuChoi()throws InterruptedException{
-        driver.findElement(CSKHLocators.TICKET_TU_CHOI_TRA_VE).click();
-        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Từ chối");
-        Thread.sleep(2000);
-        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
+        Duyet.Duyet(driver);
     }
     @AfterTest
     public void tearDown() {

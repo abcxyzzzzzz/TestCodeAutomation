@@ -18,7 +18,7 @@ import utils.TestUtils;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class Approval_Send_Mail {
+public class TaoYeuCauTuMail {
     WebDriver driver;
 
     @BeforeTest

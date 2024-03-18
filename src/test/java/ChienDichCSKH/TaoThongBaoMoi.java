@@ -12,7 +12,7 @@ import utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
 
-public class CreateNotification {
+public class TaoThongBaoMoi {
 
     WebDriver driver;
     WebDriverWait wait;

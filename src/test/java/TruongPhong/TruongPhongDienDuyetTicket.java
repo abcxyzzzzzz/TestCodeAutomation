@@ -1,12 +1,12 @@
 package TruongPhong;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.PageLocators;
+import approval.TruongPhongDien.DuyetTicketTraVe;
+import locators.ElectricManager;
+import locators.PublicLocators;
 import login.LoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import setup.SetUp;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -16,50 +16,29 @@ import java.util.concurrent.TimeUnit;
 
 public class TruongPhongDienDuyetTicket {
     WebDriver driver;
-    LoginPage loginPage;
 
     @BeforeTest
     public void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        driver.manage().window().maximize();
-        driver.get("https://crm-dev.lsat.vn/login");
+        SetUp.setUp(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        loginPage = new LoginPage(driver);
     }
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("truongphongdien@qtsc.com.vn", "truongphongdien");
+        LoginPage.login(driver, "truongphongdien@qtsc.com.vn", "truongphongdien");
         Thread.sleep(5000);
     }
-
     @Test(dependsOnMethods = "loginTest")
     public void duyetTicket() throws InterruptedException {
-        TestUtils.clickElement(driver, PageLocators.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI);
-
-        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
+        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-        int numDuyet = 1;
-        switch (numDuyet) {
-            case 1:
-                TestUtils.clickElement(driver, PageLocators.TICKET_DUYET_TRA_VE);
-                TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Công việc bạn có thể thực hiện được");
-                Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
-                break;
-            case 2:
-                driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
-                TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Công việc bạn không thể thực hiện được");
-                Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
-                break;
-        }
+        driver.findElement(PublicLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        //Xử lý
+        DuyetTicketTraVe.DuyetTicketTraVe(driver);
+
         Thread.sleep(4000);
 
     }
