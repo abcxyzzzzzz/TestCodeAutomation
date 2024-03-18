@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="1"
-           time="0.009">
+           time="0.005">
   <properties />
-            <testcase name="loginTest" time="0.009" classname="NhanVien.TestNhanVienDien">
+            <testcase name="loginTest" time="0.005" classname="NhanVien.TestNhanVienDien">
                 <failure type="org.openqa.selenium.NoSuchWindowException"
                   message="no such window: target window already closed
 from unknown error: web view not found
@@ -14,9 +14,9 @@ from unknown error: web view not found
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [49f24fc1fab28bb90bff5276b8deb4cc, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63866/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 49f24fc1fab28bb90bff5276b8deb4cc"
+Command: [8d25444add918a03e6f8ae4801e77a99, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51630}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51630/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d25444add918a03e6f8ae4801e77a99"
               >
 <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
@@ -24,9 +24,9 @@ from unknown error: web view not found
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [49f24fc1fab28bb90bff5276b8deb4cc, findElement {using=xpath, value=//input[@placeholder='Email']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63866}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63866/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 49f24fc1fab28bb90bff5276b8deb4cc
+Command: [8d25444add918a03e6f8ae4801e77a99, findElement {using=xpath, value=//input[@placeholder='Email']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.112, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51630}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51630/devtoo..., se:cdpVersion: 122.0.6261.112, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d25444add918a03e6f8ae4801e77a99
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)

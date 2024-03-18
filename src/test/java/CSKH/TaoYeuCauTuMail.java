@@ -1,7 +1,7 @@
 package CSKH;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.PageLocators;
+import locators.CSKHLocators;
+import locators.PublicLocators;
 import login.LoginPage;
 
 import org.openqa.selenium.By;
@@ -9,38 +9,31 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import setup.SetUp;
 import utils.TestUtils;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
-public class SendMail_Duyet {
+
+public class TaoYeuCauTuMail {
     WebDriver driver;
-    WebDriverWait wait;
-    LoginPage loginPage;
 
     @BeforeTest
     public void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        driver.manage().window().maximize();
-        driver.get("https://crm-dev.lsat.vn/login");
+        SetUp.setUp(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        loginPage = new LoginPage(driver);
     }
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
+        LoginPage.login(driver,"nhanviencskh@qtsc.com.vn", "nhanviencskh");
         Thread.sleep(5000);
     }
+    
     @Test(dependsOnMethods = "loginTest")
     public void openNewTabAndLoginToGmail() throws InterruptedException {
         ((JavascriptExecutor)driver).executeScript("window.open()");
@@ -75,10 +68,10 @@ public class SendMail_Duyet {
     
     @Test(dependsOnMethods = "sendEmailTest")
     public void createTicketTest() throws InterruptedException {
-        driver.findElement(PageLocators.TICKET_MANAGER_LINK).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI_CSKH).click();
-        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_CUA_TOI_CSKH);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        driver.findElement(PublicLocators.TICKET_CHUYEN_NHAN_VIEN).click();
         Thread.sleep(1000);
         int numChuyenTiep = 1;
         switch (numChuyenTiep) {
@@ -92,20 +85,20 @@ public class SendMail_Duyet {
     }
 
     public void Duyet()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_DUYET_TRA_VE).click();
-        WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-        TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Duyệt");
+        driver.findElement(CSKHLocators.TICKET_DUYET_TRA_VE).click();
+        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Duyệt");
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
     }
+    
     public void tuChoi()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
-        WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-        TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Từ chối");
+        driver.findElement(CSKHLocators.TICKET_TU_CHOI_TRA_VE).click();
+        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Từ chối");
         Thread.sleep(2000);
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
     }
+    
     @AfterTest
     public void tearDown() {
         //driver.quit();

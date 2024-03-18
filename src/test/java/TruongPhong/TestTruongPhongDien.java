@@ -1,16 +1,15 @@
 package TruongPhong;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.PageLocators;
+import approval.TruongPhongDien.XuLyCanDuyet;
+import locators.ElectricManager;
+import locators.PublicLocators;
 import login.LoginPage;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import setup.SetUp;
 import org.testng.annotations.Test;
 import utils.TestUtils;
 
@@ -19,78 +18,38 @@ import java.util.concurrent.TimeUnit;
 
 public class TestTruongPhongDien {
     WebDriver driver;
-    LoginPage loginPage;
 
     @BeforeTest
     public void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        driver.manage().window().maximize();
-        driver.get("https://crm-dev.lsat.vn/login");
+        SetUp.setUp(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        loginPage = new LoginPage(driver);
     }
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("truongphongdien@qtsc.com.vn", "truongphongdien");
+        LoginPage.login(driver, "truongphongdien@qtsc.com.vn", "truongphongdien");
         Thread.sleep(5000);
-
     }
 
     @Test(dependsOnMethods = "loginTest")
     public void chuyenTiepTickket() throws InterruptedException {
-        driver.findElement(PageLocators.YEU_CAU_DICH_VU).click();
-        driver.findElement(PageLocators.TICKET_CUA_TOI).click();
+        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+
         //Kiểm tra trạng thái ticket
         String textKiemTra = "Đã chuyển tiếp";
-        String getText = driver.findElement(PageLocators.KIEM_TRA_TRANG_THAI).getText().trim();
+        String getText = driver.findElement(ElectricManager.KIEM_TRA_TRANG_THAI).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
 
-        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-        int numChuyenTiep = 1;
-        switch (numChuyenTiep) {
-            case 1:
-                coTheXuLy();
-                break;
-            case 2:
-                khongTheXuLy();
-                break;
-            case 3:
-                tuChoi();
-                break;
-        }
-        Thread.sleep(4000);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
+
+        XuLyCanDuyet.XuLyCanDuyet(driver);
+
     }
-    public void coTheXuLy()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_CAN_DUYET).click();
-                TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện");
-                driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn có thể thực hiện được");
-                        Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
-    }
-    public void khongTheXuLy()throws InterruptedException{
-        TestUtils.selectDropDow(driver,PageLocators.TEN_NHAN_VIEN_THUC_HIEN,"Nhân viên điện" );
-        driver.findElement(PageLocators.GHI_CHU_LY_DO)
-                        .sendKeys("Công việc bạn có thể thực hiện được");
-                        Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
-    }
-    public void tuChoi()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_TU_CHOI).click();
-                WebElement reasonCancel = driver.findElement(PageLocators.GHI_CHU_LY_DO);
-                reasonCancel.click();
-                reasonCancel.sendKeys("Tôi không có nhân viên nào có thể thực hiện yêu cầu này");
-                Thread.sleep(2000);
-                driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
-    }
-    
+
     @AfterTest
     public void tearDown() {
         driver.quit();
