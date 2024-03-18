@@ -1,49 +1,43 @@
 package CSKH;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import locators.PageLocators;
+import locators.CSKHLocators;
+import locators.PublicLocators;
 import login.LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import setup.SetUp;
 import utils.TestUtils;
 
 import java.util.concurrent.TimeUnit;
-public class DuyetTicketTraVe {
-    WebDriver driver;
-    WebDriverWait wait;
-    LoginPage loginPage;
 
+public class Approval_Ticket_Return {
+    WebDriver driver;
     @BeforeTest
     public void setup() {
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
-        options.addArguments("--disable-gpu");
-        driver.manage().window().maximize();
-        driver.get("https://crm-dev.lsat.vn/login");
+        SetUp.setUp(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        loginPage = new LoginPage(driver);
     }
 
     @Test
     public void loginTest() throws InterruptedException {
-        loginPage.login("nhanviencskh@qtsc.com.vn", "nhanviencskh");
-        Thread.sleep(5000);
+        LoginPage.login(driver,"nhanviencskh@qtsc.com.vn", "nhanviencskh");
     }
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
-        TestUtils.clickElement(driver, PageLocators.TICKET_MANAGER_LINK);
-        TestUtils.clickElement(driver, PageLocators.TICKET_CUA_TOI_CSKH);
-        TestUtils.doubleClickElement(driver, PageLocators.TICKET_HANH_DONG);
-        TestUtils.clickElement(driver, PageLocators.TICKET_CHUYEN_NHAN_VIEN);
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_CUA_TOI_CSKH);
+        String text = "Chờ nghiệm thu1";
+        String getText = driver.findElement(By.xpath("(//td[@data-pin='none'])[9]")).getText().trim();
+        Assert.assertEquals(text,getText);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
 
         Thread.sleep(1000);
         int numChuyenTiep = 1;
@@ -58,16 +52,16 @@ public class DuyetTicketTraVe {
     }
 
     public void Duyet()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_DUYET_TRA_VE).click();
-        TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Duyệt");
+        driver.findElement(CSKHLocators.TICKET_DUYET_TRA_VE).click();
+        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Duyệt");
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
     }
     public void tuChoi()throws InterruptedException{
-        driver.findElement(PageLocators.TICKET_TU_CHOI_TRA_VE).click();
-        TestUtils.fillInputField(driver, PageLocators.GHI_CHU_LY_DO, "Từ chối");
+        driver.findElement(CSKHLocators.TICKET_TU_CHOI_TRA_VE).click();
+        TestUtils.fillInputField(driver, PublicLocators.GHI_CHU_LY_DO, "Từ chối");
         Thread.sleep(2000);
-        driver.findElement(PageLocators.TICKET_XAC_NHAN).click();
+        driver.findElement(PublicLocators.TICKET_XAC_NHAN).click();
     }
     @AfterTest
     public void tearDown() {
