@@ -2,6 +2,7 @@ package CSKH;
 
 import locators.CSKHLocators;
 import login.LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -9,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
-
+import login.Logout;
 import java.util.concurrent.TimeUnit;
 
 public class TestCSKH {
@@ -18,16 +19,21 @@ public class TestCSKH {
     public void setup() throws InterruptedException {
         driver = new ChromeDriver();
         SetUp.setUp(driver);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     }
 
     @Test()
-    public void loginTest() throws InterruptedException {
+    public void loginTest(WebDriver driver) throws InterruptedException {
         LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
     }
+    @Test(dependsOnMethods = "loginTest")
+    public void logout() throws InterruptedException {
+        Logout.Logout(driver);
+    }
+
 
     @Test(dependsOnMethods = "loginTest")
-    public void createTicketTest() throws InterruptedException {
+    public void createTicketTest(WebDriver driver) throws InterruptedException {
         TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
         TestUtils.clickElement(driver, CSKHLocators.REQUEST_LIST);
         TestUtils.clickElement(driver, CSKHLocators.CREATE_NEW_REQUEST);
@@ -49,12 +55,19 @@ public class TestCSKH {
         Thread.sleep(2000);
         // Chuyển tiếp
         TestUtils.clickElement(driver, CSKHLocators.SAVE_FORWARD_BUTTON);
-        Thread.sleep(4000);
+        Thread.sleep(10000);
 
+    }
+    @Test(dependsOnMethods = "createTicketTest")
+    public static String SelectMaTicket(WebDriver driver)throws InterruptedException{
+        driver.get("https://crm-dev.lsat.vn/ticket/list");
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+        String MaTicket = driver.findElement(By.xpath("(//td[@data-pin='none'])[1]")).getText().trim();
+        return MaTicket;
     }
 
     @AfterTest
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 }
