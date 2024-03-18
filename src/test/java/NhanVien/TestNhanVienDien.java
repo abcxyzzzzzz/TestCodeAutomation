@@ -33,7 +33,7 @@ public class TestNhanVienDien {
         TestUtils.clickElement(driver, EmployssLocators.YEU_CAU_DV_NV);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
         TestUtils.fillInputField(driver, ElectricManager.IN_PUT ,MaTicket);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);

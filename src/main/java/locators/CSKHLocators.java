@@ -7,7 +7,6 @@ public class CSKHLocators {
     public static final By TICKET_TU_CHOI_TRA_VE  = By.xpath("//div[contains(text(),'Từ chối')]");
     public static final By TICKET_MANAGER_LINK = By.xpath("//a[@href='/ticket-manager']");
     public static final By REQUEST_LIST = By.xpath("//span[contains(text(),'Danh sách yêu cầu')]");
-    public static final By LIST_TICKET = By.xpath("(//li[@class='mm-active'])[3]");
     public static final By CREATE_NEW_REQUEST = By.xpath("//button[contains(text(),'Tạo mới Yêu cầu')]");
     public static final By SELECT_DEPARTMENT = By.xpath("//input[@id='react-select-11-input']");
     public static final By SELECT_DIVISION = By.xpath("//input[@id='react-select-12-input']");
