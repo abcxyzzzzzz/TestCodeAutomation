@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
 import approval.CSKH.Duyet;
-import approval.CSKH.TuChoi;
+import approval.CSKH.TiepNhanTicketTuChoi;
 
 import java.util.concurrent.TimeUnit;
 
@@ -42,9 +42,21 @@ public class DuyetTicketTraVe {
         Thread.sleep(2000);
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-
         Thread.sleep(1000);
         Duyet.Duyet(driver);
+    }
+    public void TiepNhanTicketTuChoi(WebDriver driver, String MaTicket) throws InterruptedException {
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_CUA_TOI_CSKH);
+        String text = "Từ chối tiếp nhận";
+        String getText = driver.findElement(By.xpath("(//td[@data-pin='none'])[9]")).getText().trim();
+        Assert.assertEquals(text,getText);
+        TestUtils.fillInputField(driver, ElectricManager.IN_PUT ,MaTicket);
+        Thread.sleep(2000);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
+        Thread.sleep(1000);
+        TiepNhanTicketTuChoi.TiepNhanTicketTuChoi(driver);
     }
     @AfterTest
     public void tearDown() {

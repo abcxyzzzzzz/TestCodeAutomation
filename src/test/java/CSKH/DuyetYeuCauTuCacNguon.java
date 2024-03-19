@@ -33,23 +33,23 @@ public class DuyetYeuCauTuCacNguon {
 
     @Test(dependsOnMethods = "loginTest")
     public void createTicketTest() throws InterruptedException {
-        TestUtils.clickElement(driver,CSKHLocators.TICKET_MANAGER_LINK);
+        TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
         TestUtils.clickElement(driver, ReceivingRequests.YEU_CAU_CHO_TIEP_NHAN);
         String textKiemTra = "Tạo mới";
         String getText = driver.findElement(ReceivingRequests.KIEM_TRA_TRANG_THAI_YEU_CAU).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        TestUtils.doubleClickElement(driver,ReceivingRequests.CLICK_DATA_TABLE);
-        TestUtils.clickElement(driver,ReceivingRequests.TIEP_NHAN_YEU_CAU);
+        TestUtils.doubleClickElement(driver, ReceivingRequests.CLICK_DATA_TABLE);
+        TestUtils.clickElement(driver, ReceivingRequests.TIEP_NHAN_YEU_CAU);
 
         Thread.sleep(1000);
         driver.navigate().refresh();
         TestUtils.fillInputField(driver, CSKHLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, CSKHLocators.AGENT_NOTE_FIELD, "Nhanh nhất có thể nhé");
-        TestUtils.selectDropDow(driver,CSKHLocators.PRIORITY_SELECT,"Cao");
-        TestUtils.selectDropDow(driver,CSKHLocators.CATEGORIES_SELECT,"Yêu cầu");
-        TestUtils.selectDropDow(driver,CSKHLocators.SELECT_DEPARTMENT,"PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
-        TestUtils.selectDropDow(driver,CSKHLocators.SELECT_DIVISION,"điện");
-        TestUtils.selectDropDow(driver,CSKHLocators.SELECT_REQUEST_SERVICE,"Điện áp tăng cao");
+        TestUtils.selectDropDow(driver, CSKHLocators.PRIORITY_SELECT, "Cao");
+        TestUtils.selectDropDow(driver, CSKHLocators.CATEGORIES_SELECT, "Yêu cầu");
+        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DEPARTMENT, "PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
+        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DIVISION, "điện");
+        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_REQUEST_SERVICE, "Điện áp tăng cao");
         TestUtils.clickElement(driver, CSKHLocators.CREATE_TICKET_BUTTON);
         Thread.sleep(2000);
 
@@ -61,6 +61,6 @@ public class DuyetYeuCauTuCacNguon {
 
     @AfterTest
     public void tearDown() {
-            driver.quit();
+        driver.quit();
     }
 }
