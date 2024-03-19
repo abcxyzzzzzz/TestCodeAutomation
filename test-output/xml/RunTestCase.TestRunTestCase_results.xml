@@ -4,23 +4,23 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="107.768">
+           time="109.045">
   <properties />
   
   
-            <testcase name="XuLyTicket" time="19.620" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="LoginTruongPhongDien1" time="6.717" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="DuyetTraVeTicket" time="8.094" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="loginTest" time="5.897" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="ChuyenTiepTicket" time="8.654" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="LoginTruongPhongDien" time="6.778" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="DangXuat" time="0.364" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="Login" time="6.733" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="logout" time="0.351" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="DangXuat1" time="0.435" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="XuLyTicketTraVe" time="10.823" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="LoginCSKH1" time="6.668" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="createTicketTest" time="26.297" classname="RunTestCase.TestRunTestCase" />
-                <testcase name="DangXuat2" time="0.337" classname="RunTestCase.TestRunTestCase" />
+            <testcase name="Login" time="6.648" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="Logout" time="0.362" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="DangXuat1" time="0.415" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="DuyetTraVeTicket" time="8.391" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="LoginCSKH1" time="6.853" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="DangXuat" time="0.307" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="LoginTest" time="5.815" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="CreateTicketTest" time="26.572" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="LoginTruongPhongDien" time="6.744" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="LoginTruongPhongDien1" time="6.734" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="ChuyenTiepTicket" time="8.646" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="XuLyTicket" time="19.835" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="XuLyTicketTraVe" time="11.215" classname="RunTestCase.TestRunTestCase" />
+                <testcase name="DangXuat2" time="0.508" classname="RunTestCase.TestRunTestCase" />
       
 </testsuite>

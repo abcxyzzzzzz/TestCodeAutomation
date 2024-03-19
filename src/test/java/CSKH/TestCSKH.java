@@ -62,9 +62,10 @@ public class TestCSKH {
 
     @Test(dependsOnMethods = "createTicketTest")
     public static String SelectMaTicket(WebDriver driver) throws InterruptedException {
-        driver.get("https://crm-dev.lsat.vn/ticket/list");
+        Thread.sleep(1000);
+        TestUtils.doubleClickElement(driver,CSKHLocators.DOUBLE_CLICK_TABLE);
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-        String MaTicket = driver.findElement(By.xpath("(//td[@data-pin='none'])[1]")).getText().trim();
+        String MaTicket = driver.findElement(By.xpath("(//td[@data-pin='none'])[101]")).getText().trim();
         return MaTicket;
     }
 
