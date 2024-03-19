@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 
 public class TruongPhongDienDuyetTicket {
     WebDriver driver;
-
     @BeforeTest
     public void setup() {
         driver = new ChromeDriver();
@@ -29,16 +28,17 @@ public class TruongPhongDienDuyetTicket {
         LoginPage.login(driver, "truongphongdien@qtsc.com.vn", "truongphongdien");
         Thread.sleep(10000);
     }
+
     @Test(dependsOnMethods = "loginTest")
     public void duyetTicket(WebDriver driver, String MaTicket) throws InterruptedException {
         TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
-        TestUtils.fillInputField(driver,ElectricManager.IN_PUT ,MaTicket);
-        Thread.sleep(1000);
+        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        Thread.sleep(2000);
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         driver.findElement(PublicLocators.TICKET_CHUYEN_NHAN_VIEN).click();
-        //Xử lý
+        // Xử lý
         DuyetTicketTraVe.DuyetTicketTraVe(driver);
 
         Thread.sleep(4000);

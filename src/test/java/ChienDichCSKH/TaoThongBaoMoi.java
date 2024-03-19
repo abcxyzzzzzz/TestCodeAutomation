@@ -1,4 +1,5 @@
 package ChienDichCSKH;
+
 import locators.CSKHChienDich;
 import login.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +27,7 @@ public class TaoThongBaoMoi {
 
     @Test
     public void loginTest() throws InterruptedException {
-        LoginPage.login(driver,"nhanviencskh@qtsc.com.vn", "nhanviencskh");
+        LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
     }
 
     @Test(dependsOnMethods = "loginTest")
@@ -37,11 +38,12 @@ public class TaoThongBaoMoi {
         TestUtils.fillInputField(driver, CSKHChienDich.NAME_NOTIFI, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, CSKHChienDich.MA_NOTIFI, "Sửa chữa hệ thống điện trường học");
         TestUtils.fillInputField(driver, CSKHChienDich.MO_TA, "Sửa chữa hệ thống điện trường học");
-        TestUtils.selectDropDow(driver,CSKHChienDich.LOAI_THONG_BAO,"noti");
-        TestUtils.selectDropDow(driver,CSKHChienDich.NOI_SU_DUNG,"noti");
-        TestUtils.fillInputField(driver,CSKHChienDich.TIEU_DE, "Chúc mừng sinh nhật");
-        TestUtils.fillInputField(driver,CSKHChienDich.NOI_DUNG_POPUP, "Chúc mừng sinh nhật");
+        TestUtils.selectDropDow(driver, CSKHChienDich.LOAI_THONG_BAO, "noti");
+        TestUtils.selectDropDow(driver, CSKHChienDich.NOI_SU_DUNG, "noti");
+        TestUtils.fillInputField(driver, CSKHChienDich.TIEU_DE, "Chúc mừng sinh nhật");
+        TestUtils.fillInputField(driver, CSKHChienDich.NOI_DUNG_POPUP, "Chúc mừng sinh nhật");
     }
+
     @AfterTest
     public void tearDown() {
         driver.quit();

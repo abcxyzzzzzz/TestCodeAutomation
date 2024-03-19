@@ -6,9 +6,8 @@
     </listeners>
     <test name="Sample Test Case">
         <classes>
-            <class name="CSKH.TestCSKH"/>
-            <class name="TruongPhong.TestTruongPhongDien"/>
-            <class name="NhanVien.TestNhanVienDien"/>
+            <class name="RunTestCase.TestRunTestCase"/>
         </classes>
     </test>
+
 </suite>
