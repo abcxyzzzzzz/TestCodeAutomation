@@ -11,19 +11,6 @@ target/
 *.iws
 *.iml
 *.ipr
-*WorkFlow2.java
-*WorkFlow3.java
-*WorkFlow4.java
-*WorkFlow5.java
-*WorkFlow6.java
-*WorkFlow7.java
-*WorkFlow8.java
-*WorkFlow9.java
-*WorkFlow10.java
-*WorkFlow11.java
-*WorkFlow12.java
-*WorkFlow13.java
-*WorkFlow14.java
 
 ### Eclipse ###
 .apt_generated
