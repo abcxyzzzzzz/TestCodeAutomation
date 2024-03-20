@@ -3,7 +3,7 @@ package NhanVien;
 import approval.NhanVien.TuChoiYeuCau;
 import locators.ElectricManager;
 import locators.EmployssLocators;
-import approval.NhanVien.DongYYeuCau;
+import approval.NhanVien.NhanVienTiepNhanYeuCau;
 import locators.PublicLocators;
 import login.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -40,7 +40,7 @@ public class TestNhanVienDien {
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        DongYYeuCau.DongYYeuCau(driver,thuchien);
+        NhanVienTiepNhanYeuCau.DongYYeuCau(driver,thuchien);
     }
     public void tuChoiTicket(WebDriver driver, String MaTicket) throws InterruptedException {
         TestUtils.clickElement(driver, EmployssLocators.YEU_CAU_DV_NV);
@@ -49,7 +49,7 @@ public class TestNhanVienDien {
         Thread.sleep(2000);
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
-        TuChoiYeuCau.TuChoiYeuCau(driver);
+        NhanVienTiepNhanYeuCau.TuChoiYeuCau(driver);
     }
     @AfterTest
     public void finish() {

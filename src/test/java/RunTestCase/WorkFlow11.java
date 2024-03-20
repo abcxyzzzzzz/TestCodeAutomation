@@ -20,7 +20,7 @@ import utils.TestUtils;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class WorkFlow1 {
+public class WorkFlow11 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
@@ -76,7 +76,7 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành chuyển tiếp Ticket");
         System.out.println("------------------------------------------------");
-        testTruongPhongDien.CHuyenKhongCanDuyet(driver, IDTicket);
+        testTruongPhongDien.chuyenTiepTickket(driver, IDTicket);
     }
 
     @Test(dependsOnMethods = "ChuyenTiepTicket")
@@ -100,7 +100,7 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành xử lý");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.NhanVienTiepNhan(driver,2, IDTicket);
+        testNhanVienDien.NhanVienTiepNhan(driver,1, IDTicket);
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
@@ -148,7 +148,7 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành duyệt");
         System.out.println("------------------------------------------------");
-        duyetTicketTraVe.DuyetTraVe(driver, IDTicket);
+        duyetTicketTraVe.TuChoiTraVe(driver, IDTicket);
     }
 
     @AfterTest
