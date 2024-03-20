@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sample Test Case"
+           tests="12"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="163.660">
+  <properties />
+  
+  
+            <testcase name="LoginTruongPhongDien" time="6.712" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="Logout" time="0.338" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="LoginTest" time="5.387" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="LoginTruongPhongDien1" time="6.758" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="DuyetTraVeTicket" time="8.477" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="CreateTicketTest" time="25.307" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="DangXuat1" time="0.373" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="ChuyenTiepTicket" time="8.659" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="DangXuat" time="0.327" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="Login" time="6.708" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="LoginCSKH1" time="74.956" classname="RunTestCase.LuongKhongCanDuyet" />
+                <testcase name="XuLyTicket" time="19.658" classname="RunTestCase.LuongKhongCanDuyet" />
+      
+</testsuite>

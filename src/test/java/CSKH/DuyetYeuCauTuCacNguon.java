@@ -28,7 +28,7 @@ public class DuyetYeuCauTuCacNguon {
     @Test
     public void loginTest() throws InterruptedException {
         LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
-        Thread.sleep(5000);
+        Thread.sleep(4000);
     }
 
     @Test(dependsOnMethods = "loginTest")

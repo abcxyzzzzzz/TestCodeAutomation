@@ -7,6 +7,8 @@
     <test name="Sample Test Case">
         <classes>
             <class name="RunTestCase.TestRunTestCase"/>
+            <class name="RunTestCase.LuongKhongCanDuyet"/>
+            <class name="RunTestCase.LuongTuChoi"/>
         </classes>
     </test>
 
