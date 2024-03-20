@@ -20,7 +20,7 @@ import utils.TestUtils;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class LuongKhongCanDuyet {
+public class WorkFlow9 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
@@ -70,7 +70,7 @@ public class LuongKhongCanDuyet {
     public void ChuyenTiepTicket() throws InterruptedException {
         System.out.println("Tiến hành chuyển tiếp Ticket");
         System.out.println("------------------------------------------------");
-        testTruongPhongDien.CHuyenKhongCanDuyet(driver, IDTicket);
+        testTruongPhongDien.chuyenTiepTickket(driver, IDTicket);
     }
 
     @Test(dependsOnMethods = "ChuyenTiepTicket")
@@ -91,7 +91,7 @@ public class LuongKhongCanDuyet {
     public void XuLyTicket() throws InterruptedException {
         System.out.println("Tiến hành xử lý");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.NhanVienTiepNhan(driver,1, IDTicket);
+        testNhanVienDien.NhanVienTiepNhan(driver,2, IDTicket);
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
@@ -102,16 +102,24 @@ public class LuongKhongCanDuyet {
     }
 
     @Test(dependsOnMethods = "DangXuat1")
-    public void LoginCSKH1() throws InterruptedException {
-        System.out.println("Tiến hành đăng nhập CSKH");
+    public void LoginTruongPhongDien1() throws InterruptedException {
+        System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        testCSKH.loginTest(driver);
+        testTruongPhongDien.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "LoginCSKH1")
-    public void DuyetTraVeTicket() throws InterruptedException {
-        System.out.println("Tiến hành duyệt");
+    @Test(dependsOnMethods = "LoginTruongPhongDien1")
+    public void XuLyTicketTraVe() throws InterruptedException {
+        System.out.println("Tiến hành xử lý ticket");
         System.out.println("------------------------------------------------");
+        truongPhongDienDuyetTicket.tuChoiDuyetTicket(driver, IDTicket);
+    }
+
+    @Test(dependsOnMethods = "XuLyTicketTraVe")
+    public void DangXuat2() throws InterruptedException {
+        System.out.println("Tiến hành đăng xuất");
+        System.out.println("------------------------------------------------");
+        Logout.Logout(driver);
     }
     @AfterTest
     public void Close() {

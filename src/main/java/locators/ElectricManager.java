@@ -8,7 +8,7 @@ public class ElectricManager {
     public static final By TICKET_TU_CHOI = By.xpath("//div[contains(text(),'Từ chối tiếp nhận')]");
     public static final By TEN_NHAN_VIEN_THUC_HIEN = By.xpath("//input[@id='react-select-32-input']");
     public static final By TICKET_DUYET_TRA_VE  = By.xpath("//div[contains(text(),'Duyệt')]");
-    public static final By TICKET_TU_CHOI_TRA_VE  = By.xpath("//div[contains(text(),'Từ chối')]");
+    public static final By  TICKET_TU_CHOI_TRA_VE  = By.xpath("(//button[@role='menuitem'])[24]");
     public static final By KIEM_TRA_TRANG_THAI  = By.xpath("(//td[@data-pin='none'])[9]");
     public static final By IN_PUT  = By.xpath("(//input[contains(@placeholder,'...')])[2]");
 }

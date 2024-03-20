@@ -1,26 +1,21 @@
 package RunTestCase;
 
 import CSKH.DuyetTicketTraVe;
-import locators.CSKHLocators;
-import login.LoginPage;
-import login.Logout;
 import CSKH.TestCSKH;
+import NhanVien.TestNhanVienDien;
 import TruongPhong.TestTruongPhongDien;
 import TruongPhong.TruongPhongDienDuyetTicket;
-import NhanVien.TestNhanVienDien;
-import org.openqa.selenium.By;
+import login.Logout;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
-import utils.TestUtils;
 
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class LuongKhongCanDuyet {
+public class WorkFlow5 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
@@ -112,10 +107,10 @@ public class LuongKhongCanDuyet {
     public void DuyetTraVeTicket() throws InterruptedException {
         System.out.println("Tiến hành duyệt");
         System.out.println("------------------------------------------------");
+        duyetTicketTraVe.TuChoiTraVe(driver,IDTicket);
     }
     @AfterTest
     public void Close() {
         driver.quit();
     }
-
 }

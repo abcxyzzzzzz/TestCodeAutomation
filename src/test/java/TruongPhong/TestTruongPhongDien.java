@@ -1,8 +1,8 @@
 package TruongPhong;
 
+import approval.TruongPhongDien.TuChoi;
 import approval.TruongPhongDien.XuLyCanDuyet;
 import approval.TruongPhongDien.XuLyKhongCanDuyet;
-import approval.TruongPhongDien.TuChoi;
 import locators.ElectricManager;
 import locators.PublicLocators;
 import login.LoginPage;
