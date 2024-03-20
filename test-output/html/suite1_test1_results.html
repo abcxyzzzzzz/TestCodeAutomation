@@ -12,337 +12,12 @@
 <body>
 <h1>Sample Test Case</h1>
 <p>
-  Test duration: 218.810s
+  Test duration: 345.521s
 </p>
 
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">RunTestCase.LuongKhongCanDuyet</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  XuLyTicket
-      </td>
-  <td class="duration">
-    14.190s
-  </td>
-  <td class="result">
-        
-    
-        
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
-from unknown error: web view not found<br/>
-&nbsp; (Session info: chrome=122.0.6261.129)<br/>
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [dde1174c1d001b1c6ee9008ff58fba0a, findElement {using=xpath, value=//button[contains(text(),&apos;Cập nhật kết quả sau khi xử lý&apos;)]}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50349}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50349/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: dde1174c1d001b1c6ee9008ff58fba0a</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
-              utils.TestUtils.clickElement(TestUtils.java:19)<br />
-              approval.NhanVien.DongYYeuCau.DongYYeuCau(DongYYeuCau.java:20)<br />
-              NhanVien.TestNhanVienDien.tiepNhanTicket(TestNhanVienDien.java:42)<br />
-              RunTestCase.LuongKhongCanDuyet.XuLyTicket(LuongKhongCanDuyet.java:85)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br />
-              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br />
-              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br />
-              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
-              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br />
-              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:766)<br />
-              org.testng.TestRunner.run(TestRunner.java:587)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:384)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:286)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1109)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1039)<br />
-              org.testng.TestNG.run(TestNG.java:1007)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">RunTestCase.LuongTuChoi</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  CreateTicketTest
-      </td>
-  <td class="duration">
-    0.007s
-  </td>
-  <td class="result">
-        
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
-from unknown error: web view not found<br/>
-&nbsp; (Session info: chrome=122.0.6261.129)<br/>
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [357cc00a03b2a6aa9945050f6ee9c01b, findElement {using=xpath, value=//a[@href=&apos;/ticket-manager&apos;]}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50365}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50365/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
-              utils.TestUtils.clickElement(TestUtils.java:19)<br />
-              CSKH.TestCSKH.createTicketTest(TestCSKH.java:38)<br />
-              RunTestCase.LuongTuChoi.CreateTicketTest(LuongTuChoi.java:46)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
-              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-              java.base/java.lang.reflect.Method.invoke(Method.java:564)<br />
-              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br />
-              org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br />
-              org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br />
-              org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br />
-              org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br />
-              org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br />
-              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:766)<br />
-              org.testng.TestRunner.run(TestRunner.java:587)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:384)<br />
-              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)<br />
-              org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)<br />
-              org.testng.SuiteRunner.run(SuiteRunner.java:286)<br />
-              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)<br />
-              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)<br />
-              org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)<br />
-              org.testng.TestNG.runSuitesLocally(TestNG.java:1109)<br />
-              org.testng.TestNG.runSuites(TestNG.java:1039)<br />
-              org.testng.TestNG.run(TestNG.java:1007)<br />
-              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
-              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
-                </div>
-      </td>
-</tr>
-      </table>
-
-  <table class="resultsTable" width="100%">
-    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">RunTestCase.LuongKhongCanDuyet</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  DangXuat1
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongKhongCanDuyet.XuLyTicket</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DuyetTraVeTicket
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongKhongCanDuyet.LoginCSKH1</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  LoginCSKH1
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongKhongCanDuyet.LoginTruongPhongDien1</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  LoginTruongPhongDien1
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongKhongCanDuyet.DangXuat1</span>
-                
-    
-        
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">RunTestCase.LuongTuChoi</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  ChuyenTiepTicket
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.LoginTruongPhongDien</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DangXuat
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.ChuyenTiepTicket</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DuyetTraVeTicket
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.LoginCSKH1</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  LoginCSKH1
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.DangXuat</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  LoginTruongPhongDien
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.Logout</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  Logout
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.LuongTuChoi.CreateTicketTest</span>
-                
-    
-        
-
-      </td>
-</tr>
-      </table>
 
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
@@ -355,7 +30,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   ChuyenTiepTicket
       </td>
   <td class="duration">
-    8.710s
+    8.659s
   </td>
   <td class="result">
         
@@ -369,7 +44,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   CreateTicketTest
       </td>
   <td class="duration">
-    26.983s
+    25.307s
   </td>
   <td class="result">
         
@@ -383,7 +58,35 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   DangXuat
       </td>
   <td class="duration">
-    0.324s
+    0.327s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DangXuat1
+      </td>
+  <td class="duration">
+    0.373s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DuyetTraVeTicket
+      </td>
+  <td class="duration">
+    8.477s
   </td>
   <td class="result">
         
@@ -397,7 +100,21 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   Login
       </td>
   <td class="duration">
-    6.666s
+    6.708s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginCSKH1
+      </td>
+  <td class="duration">
+    74.956s
   </td>
   <td class="result">
         
@@ -411,7 +128,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginTest
       </td>
   <td class="duration">
-    5.341s
+    5.387s
   </td>
   <td class="result">
         
@@ -425,7 +142,21 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginTruongPhongDien
       </td>
   <td class="duration">
-    6.706s
+    6.712s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginTruongPhongDien1
+      </td>
+  <td class="duration">
+    6.758s
   </td>
   <td class="result">
         
@@ -439,7 +170,21 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   Logout
       </td>
   <td class="duration">
-    0.339s
+    0.338s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  XuLyTicket
+      </td>
+  <td class="duration">
+    19.658s
   </td>
   <td class="result">
         
@@ -454,10 +199,108 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
             
 <tr>
   <td class="method">
+                  ChuyenTiepTicket
+      </td>
+  <td class="duration">
+    7.480s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  CreateTicketTest
+      </td>
+  <td class="duration">
+    25.998s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DangXuat
+      </td>
+  <td class="duration">
+    0.329s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  DuyetTraVeTicket
+      </td>
+  <td class="duration">
+    8.273s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginCSKH1
+      </td>
+  <td class="duration">
+    6.705s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
                   LoginTest
       </td>
   <td class="duration">
-    5.363s
+    5.387s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginTruongPhongDien
+      </td>
+  <td class="duration">
+    6.739s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Logout
+      </td>
+  <td class="duration">
+    0.335s
   </td>
   <td class="result">
         
@@ -475,7 +318,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   ChuyenTiepTicket
       </td>
   <td class="duration">
-    8.646s
+    8.774s
   </td>
   <td class="result">
         
@@ -489,7 +332,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   CreateTicketTest
       </td>
   <td class="duration">
-    26.572s
+    25.406s
   </td>
   <td class="result">
         
@@ -503,7 +346,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   DangXuat
       </td>
   <td class="duration">
-    0.307s
+    0.336s
   </td>
   <td class="result">
         
@@ -517,7 +360,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   DangXuat1
       </td>
   <td class="duration">
-    0.415s
+    0.494s
   </td>
   <td class="result">
         
@@ -531,7 +374,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   DangXuat2
       </td>
   <td class="duration">
-    0.508s
+    0.442s
   </td>
   <td class="result">
         
@@ -545,7 +388,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   DuyetTraVeTicket
       </td>
   <td class="duration">
-    8.391s
+    8.327s
   </td>
   <td class="result">
         
@@ -559,7 +402,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   Login
       </td>
   <td class="duration">
-    6.648s
+    6.742s
   </td>
   <td class="result">
         
@@ -573,7 +416,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginCSKH1
       </td>
   <td class="duration">
-    6.853s
+    6.687s
   </td>
   <td class="result">
         
@@ -587,7 +430,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginTest
       </td>
   <td class="duration">
-    5.815s
+    6.092s
   </td>
   <td class="result">
         
@@ -601,7 +444,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginTruongPhongDien
       </td>
   <td class="duration">
-    6.744s
+    6.941s
   </td>
   <td class="result">
         
@@ -615,7 +458,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   LoginTruongPhongDien1
       </td>
   <td class="duration">
-    6.734s
+    6.693s
   </td>
   <td class="result">
         
@@ -629,7 +472,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   Logout
       </td>
   <td class="duration">
-    0.362s
+    0.721s
   </td>
   <td class="result">
         
@@ -643,7 +486,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   XuLyTicket
       </td>
   <td class="duration">
-    19.835s
+    19.622s
   </td>
   <td class="result">
         
@@ -657,7 +500,7 @@ Session ID: 357cc00a03b2a6aa9945050f6ee9c01b</b></a><br />
                   XuLyTicketTraVe
       </td>
   <td class="duration">
-    11.215s
+    10.844s
   </td>
   <td class="result">
         
