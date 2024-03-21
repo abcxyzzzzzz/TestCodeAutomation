@@ -12,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
+import approval.CSKH.RandomCSKH;
 
 import java.util.concurrent.TimeUnit;
 
@@ -46,7 +47,7 @@ public class WorkFlow5 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

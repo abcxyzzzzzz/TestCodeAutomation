@@ -1,30 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sample Test Case"
+<testsuite name="Test Case 3"
            tests="12"
            failures="1"
            errors="0"
-           skipped="10"
-           time="39.498">
+           skipped="11"
+           time="0.009">
   <properties />
-            <testcase name="CreateTicketTest" time="34.092" classname="RunTestCase.WorkFlow3">
-                <failure type="org.openqa.selenium.NoSuchElementException"
-                  message="Unable to find element with locator By.xpath: (//td[@data-pin=&apos;none&apos;])[101]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+            <testcase name="DangNhapCSKH" time="0.009" classname="RunTestCase.WorkFlow3">
+                <failure type="org.openqa.selenium.NoSuchWindowException"
+                  message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: driver.version: RemoteWebDriver"
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2a66af177d31c44cc64882077edd13f0, findElement {value=//input[@placeholder=&apos;Email&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53615}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53615/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a66af177d31c44cc64882077edd13f0"
               >
-<![CDATA[org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: (//td[@data-pin='none'])[101]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.129)
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: RemoteWebDriver
-  org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2a66af177d31c44cc64882077edd13f0, findElement {value=//input[@placeholder='Email'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53615}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53615/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a66af177d31c44cc64882077edd13f0
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
+  java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+  org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+  org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
   org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  CSKH.TestCSKH.SelectMaTicket(TestCSKH.java:73)
-  RunTestCase.WorkFlow3.CreateTicketTest(WorkFlow3.java:52)
+  login.LoginPage.login(LoginPage.java:14)
+  CSKH.TestCSKH.loginTest(TestCSKH.java:28)
+  RunTestCase.WorkFlow3.DangNhapCSKH(WorkFlow3.java:45)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,37 +78,39 @@ Driver info: driver.version: RemoteWebDriver
 
           </testcase>
   
+            <testcase name="XuLyTicketTraVe" time="0.0" classname="RunTestCase.WorkFlow3">
+          <skipped />
+    </testcase>
+            <testcase name="LoginTruongPhongDien1" time="0.0" classname="RunTestCase.WorkFlow3">
+          <skipped />
+    </testcase>
+            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow3">
+          <skipped />
+    </testcase>
+            <testcase name="Login" time="0.0" classname="RunTestCase.WorkFlow3">
+          <skipped />
+    </testcase>
+            <testcase name="CreateTicketTest" time="0.0" classname="RunTestCase.WorkFlow3">
+          <skipped />
+    </testcase>
             <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
             <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
-            <testcase name="LoginTruongPhongDien1" time="0.0" classname="RunTestCase.WorkFlow3">
-          <skipped />
-    </testcase>
-            <testcase name="XuLyTicketTraVe" time="0.0" classname="RunTestCase.WorkFlow3">
-          <skipped />
-    </testcase>
-            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow3">
-          <skipped />
-    </testcase>
             <testcase name="DangXuat2" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
-            <testcase name="Login" time="0.0" classname="RunTestCase.WorkFlow3">
+            <testcase name="ChuyenTiepTicket" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
             <testcase name="DangXuat1" time="0.0" classname="RunTestCase.WorkFlow3">
-          <skipped />
-    </testcase>
-            <testcase name="ChuyenTiepTicket" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
             <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow3">
           <skipped />
     </testcase>
   
-            <testcase name="LoginTest" time="5.406" classname="RunTestCase.WorkFlow3" />
-      
+  
 </testsuite>

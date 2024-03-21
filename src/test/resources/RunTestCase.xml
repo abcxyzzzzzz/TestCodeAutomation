@@ -4,21 +4,60 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
     </listeners>
-    <test name="Sample Test Case">
+    <test name="Test Case 1">
         <classes>
             <class name="RunTestCase.WorkFlow1"/>
+        </classes>
+    </test><test name="Test Case 2">
+        <classes>
             <class name="RunTestCase.WorkFlow2"/>
+        </classes>
+    </test><test name="Test Case 3">
+        <classes>
             <class name="RunTestCase.WorkFlow3"/>
+        </classes>
+    </test><test name="Test Case 4">
+        <classes>
             <class name="RunTestCase.WorkFlow4"/>
+        </classes>
+    </test><test name="Test Case 5">
+        <classes>
             <class name="RunTestCase.WorkFlow5"/>
+        </classes>
+    </test><test name="Test Case 6">
+        <classes>
             <class name="RunTestCase.WorkFlow6"/>
+        </classes>
+    </test><test name="Test Case 7">
+        <classes>
             <class name="RunTestCase.WorkFlow7"/>
+        </classes>
+    </test><test name="Test Case 8">
+        <classes>
             <class name="RunTestCase.WorkFlow8"/>
+        </classes>
+    </test><test name="Test Case 9">
+        <classes>
             <class name="RunTestCase.WorkFlow9"/>
+        </classes>
+    </test><test name="Test Case 10">
+        <classes>
             <class name="RunTestCase.WorkFlow10"/>
+        </classes>
+    </test><test name="Test Case 11">
+        <classes>
             <class name="RunTestCase.WorkFlow11"/>
+        </classes>
+    </test><test name="Test Case 12">
+        <classes>
             <class name="RunTestCase.WorkFlow12"/>
+        </classes>
+    </test><test name="Test Case 13">
+        <classes>
             <class name="RunTestCase.WorkFlow13"/>
+        </classes>
+    </test><test name="Test Case 14">
+        <classes>
             <class name="RunTestCase.WorkFlow14"/>
         </classes>
     </test>

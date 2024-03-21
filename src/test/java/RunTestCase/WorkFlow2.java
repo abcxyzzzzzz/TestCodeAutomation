@@ -1,6 +1,7 @@
 package RunTestCase;
 
 import CSKH.DuyetTicketTraVe;
+import approval.CSKH.RandomCSKH;
 import locators.CSKHLocators;
 import login.LoginPage;
 import login.Logout;
@@ -30,7 +31,7 @@ public class WorkFlow2 {
     String IDTicket = null;
 
     @BeforeTest
-    public void setup() {
+    public void ChuanBi() {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành set up");
         System.out.println("------------------------------------------------");
@@ -39,47 +40,23 @@ public class WorkFlow2 {
     }
 
     @Test
-    public void LoginTest() throws InterruptedException {
+    public void DangNhapCSKH() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
         testCSKH.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "LoginTest")
-    public void CreateTicketTest() throws InterruptedException {
+    @Test(dependsOnMethods = "DangNhapCSKH")
+    public void TaoTicket() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 
-    @Test(dependsOnMethods = "CreateTicketTest")
-    public void Logout() throws InterruptedException {
-        System.out.println("------------------------------------------------");
-        System.out.println("Tiến hành đăng xuất");
-        System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
-    }
-
-    @Test(dependsOnMethods = "Logout")
-    public void LoginTruongPhongDien() throws InterruptedException {
-        System.out.println("------------------------------------------------");
-        System.out.println("Tiến hành đăng nhập trưởng phòng điện");
-        System.out.println("------------------------------------------------");
-        testTruongPhongDien.loginTest(driver);
-    }
-
-    @Test(dependsOnMethods = "LoginTruongPhongDien")
-    public void ChuyenTiepTicket() throws InterruptedException {
-        System.out.println("------------------------------------------------");
-        System.out.println("Tiến hành chuyển tiếp Ticket");
-        System.out.println("------------------------------------------------");
-        testTruongPhongDien.CHuyenKhongCanDuyet(driver, IDTicket);
-    }
-
-    @Test(dependsOnMethods = "ChuyenTiepTicket")
+    @Test(dependsOnMethods = "TaoTicket")
     public void DangXuat() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
@@ -88,14 +65,38 @@ public class WorkFlow2 {
     }
 
     @Test(dependsOnMethods = "DangXuat")
-    public void Login() throws InterruptedException {
+    public void DangNhapTruongPhongDien() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành đăng nhập trưởng phòng điện");
+        System.out.println("------------------------------------------------");
+        testTruongPhongDien.loginTest(driver);
+    }
+
+    @Test(dependsOnMethods = "DangNhapTruongPhongDien")
+    public void ChuyenTicketChoNhanVien() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành chuyển tiếp Ticket");
+        System.out.println("------------------------------------------------");
+        testTruongPhongDien.CHuyenKhongCanDuyet(driver, IDTicket);
+    }
+
+    @Test(dependsOnMethods = "ChuyenTicketChoNhanVien")
+    public void DangXuatTruongPhongDien() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành đăng xuất");
+        System.out.println("------------------------------------------------");
+        Logout.Logout(driver);
+    }
+
+    @Test(dependsOnMethods = "DangXuatTruongPhongDien")
+    public void DangNhapNhanVienDien() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
         testNhanVienDien.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "Login")
+    @Test(dependsOnMethods = "DangNhapNhanVienDien")
     public void XuLyTicket() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành xử lý");
@@ -104,47 +105,47 @@ public class WorkFlow2 {
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
-    public void DangXuat1() throws InterruptedException {
+    public void DangXuatNhanVienDien() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
         Logout.Logout(driver);
     }
 
-    @Test(dependsOnMethods = "DangXuat1")
-    public void LoginTruongPhongDien1() throws InterruptedException {
+    @Test(dependsOnMethods = "DangXuatNhanVienDien")
+    public void DangNhapTruongPhongDienLan2() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
         testTruongPhongDien.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "LoginTruongPhongDien1")
-    public void XuLyTicketTraVe() throws InterruptedException {
+    @Test(dependsOnMethods = "DangNhapTruongPhongDienLan2")
+    public void XuLyTicketNhanVienTraVe() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành xử lý ticket");
         System.out.println("------------------------------------------------");
         truongPhongDienDuyetTicket.duyetTicket(driver, IDTicket);
     }
 
-    @Test(dependsOnMethods = "XuLyTicketTraVe")
-    public void DangXuat2() throws InterruptedException {
+    @Test(dependsOnMethods = "XuLyTicketNhanVienTraVe")
+    public void DangXuatTruongPhongDienLan2() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
         Logout.Logout(driver);
     }
 
-    @Test(dependsOnMethods = "DangXuat2")
-    public void LoginCSKH1() throws InterruptedException {
+    @Test(dependsOnMethods = "DangXuatTruongPhongDienLan2")
+    public void DangNhapCSKHLan2() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập CSKH");
         System.out.println("------------------------------------------------");
         testCSKH.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "LoginCSKH1")
-    public void DuyetTraVeTicket() throws InterruptedException {
+    @Test(dependsOnMethods = "DangNhapCSKHLan2")
+    public void DuyetTicketTraVe() throws InterruptedException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành duyệt");
         System.out.println("------------------------------------------------");

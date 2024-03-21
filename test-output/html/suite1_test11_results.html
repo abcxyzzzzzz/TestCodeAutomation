@@ -3,16 +3,16 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Test Case 1</title>
+  <title>Test Results Report - Test Case 11</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Test Case 1</h1>
+<h1>Test Case 11</h1>
 <p>
-  Test duration: 37.540s
+  Test duration: 1.529s
 </p>
 
 
@@ -20,31 +20,30 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">RunTestCase.WorkFlow1</td>
+        <td colspan="3" class="group">RunTestCase.WorkFlow11</td>
       </tr>
             
 <tr>
   <td class="method">
-                  TaoTicket
+                  LoginTest
       </td>
   <td class="duration">
-    1.753s
+    0.008s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
+from unknown error: web view not found<br/>
 &nbsp; (Session info: chrome=122.0.6261.129)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception<br/>
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
 Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [811bc53ad255205b60d7db92ab42d85b, clickElement {id=f.3F226AB7C76378BD6E216E0FD50A0474.d.B073381F61852C135F3F3B460E425F46.e.66}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53580}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53580/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Element: [[ChromeDriver: chrome on windows (811bc53ad255205b60d7db92ab42d85b)] -&gt; xpath: //a[@href=&apos;/ticket-manager&apos;]]<br/>
-Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
+Command: [1ba6d24f660a8e5c8d949fd34118b691, findElement {value=//input[@placeholder=&apos;Email&apos;], using=xpath}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53788}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53788/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Session ID: 1ba6d24f660a8e5c8d949fd34118b691</b></a><br />
     <div class="stackTrace" id="exception-0">
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
@@ -58,11 +57,13 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
               org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
-              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)<br />
-              org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)<br />
-              utils.TestUtils.clickElement(TestUtils.java:19)<br />
-              CSKH.TestCSKH.createTicketTest(TestCSKH.java:38)<br />
-              RunTestCase.WorkFlow1.TaoTicket(WorkFlow1.java:54)<br />
+              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
+              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
+              login.LoginPage.login(LoginPage.java:14)<br />
+              CSKH.TestCSKH.loginTest(TestCSKH.java:28)<br />
+              RunTestCase.WorkFlow11.LoginTest(WorkFlow11.java:48)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -98,19 +99,19 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
   <table class="resultsTable" width="100%">
     <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">RunTestCase.WorkFlow1</td>
+        <td colspan="3" class="group">RunTestCase.WorkFlow11</td>
       </tr>
             
 <tr>
   <td class="method">
-                  ChuyenTicketChoNhanVien
+                  ChuyenTiepTicket
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangNhapTruongPhongDien</span>
+        <span class="dependency">RunTestCase.WorkFlow11.LoginTruongPhongDien</span>
                 
     
         
@@ -119,62 +120,14 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  DangNhapCSKHLan2
-      </td>
-  <td class="duration">
-    0.002s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangXuatTruongPhongDienLan2</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DangNhapNhanVienDien
+                  CreateTicketTest
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangXuatTruongPhongDien</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DangNhapTruongPhongDien
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangXuat</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  DangNhapTruongPhongDienLan2
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangXuatNhanVienDien</span>
+        <span class="dependency">RunTestCase.WorkFlow11.LoginTest</span>
                 
     
         
@@ -190,7 +143,7 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.TaoTicket</span>
+        <span class="dependency">RunTestCase.WorkFlow11.ChuyenTiepTicket</span>
                 
     
         
@@ -199,14 +152,14 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  DangXuatNhanVienDien
+                  DangXuat1
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.XuLyTicket</span>
+        <span class="dependency">RunTestCase.WorkFlow11.XuLyTicket</span>
                 
     
         
@@ -215,14 +168,14 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  DangXuatTruongPhongDien
+                  DangXuat2
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.ChuyenTicketChoNhanVien</span>
+        <span class="dependency">RunTestCase.WorkFlow11.XuLyTicketTraVe</span>
                 
     
         
@@ -231,14 +184,14 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  DangXuatTruongPhongDienLan2
+                  DuyetTraVeTicket
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.XuLyTicketNhanVienTraVe</span>
+        <span class="dependency">RunTestCase.WorkFlow11.LoginCSKH1</span>
                 
     
         
@@ -247,14 +200,78 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  DuyetTicketTraVe
+                  Login
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangNhapCSKHLan2</span>
+        <span class="dependency">RunTestCase.WorkFlow11.DangXuat</span>
+                
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginCSKH1
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">RunTestCase.WorkFlow11.DangXuat2</span>
+                
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginTruongPhongDien
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">RunTestCase.WorkFlow11.Logout</span>
+                
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  LoginTruongPhongDien1
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">RunTestCase.WorkFlow11.DangXuat1</span>
+                
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Logout
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+                             <i>Depends on method(s): </i>
+        <span class="dependency">RunTestCase.WorkFlow11.CreateTicketTest</span>
                 
     
         
@@ -270,7 +287,7 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangNhapNhanVienDien</span>
+        <span class="dependency">RunTestCase.WorkFlow11.Login</span>
                 
     
         
@@ -279,14 +296,14 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
 <tr>
   <td class="method">
-                  XuLyTicketNhanVienTraVe
+                  XuLyTicketTraVe
       </td>
   <td class="duration">
     0.000s
   </td>
   <td class="result">
                              <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow1.DangNhapTruongPhongDienLan2</span>
+        <span class="dependency">RunTestCase.WorkFlow11.LoginTruongPhongDien1</span>
                 
     
         
@@ -295,27 +312,6 @@ Session ID: 811bc53ad255205b60d7db92ab42d85b</b></a><br />
 </tr>
       </table>
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">RunTestCase.WorkFlow1</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  DangNhapCSKH
-      </td>
-  <td class="duration">
-    33.877s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-      </table>
   
 </body>
 </html>

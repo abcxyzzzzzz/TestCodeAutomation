@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sample Test Case"
+<testsuite name="Test Case 13"
            tests="9"
            failures="1"
            errors="0"
@@ -14,9 +14,9 @@ from unknown error: web view not found
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [31dc2921f073fa9dd1fb8361948e2ee0, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63720}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63720/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 31dc2921f073fa9dd1fb8361948e2ee0"
+Command: [e02e722cd083486851793fc151fd0ae6, findElement {value=//input[@placeholder=&apos;Email&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53835/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e02e722cd083486851793fc151fd0ae6"
               >
 <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
@@ -24,9 +24,9 @@ from unknown error: web view not found
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [31dc2921f073fa9dd1fb8361948e2ee0, findElement {using=xpath, value=//input[@placeholder='Email']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63720}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63720/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 31dc2921f073fa9dd1fb8361948e2ee0
+Command: [e02e722cd083486851793fc151fd0ae6, findElement {value=//input[@placeholder='Email'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53835/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e02e722cd083486851793fc151fd0ae6
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -43,9 +43,9 @@ Session ID: 31dc2921f073fa9dd1fb8361948e2ee0
   org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  login.LoginPage.login(LoginPage.java:13)
-  CSKH.TestCSKH.loginTest(TestCSKH.java:33)
-  RunTestCase.WorkFlow13.LoginTest(WorkFlow13.java:44)
+  login.LoginPage.login(LoginPage.java:14)
+  CSKH.TestCSKH.loginTest(TestCSKH.java:28)
+  RunTestCase.WorkFlow13.LoginTest(WorkFlow13.java:46)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,19 +81,19 @@ Session ID: 31dc2921f073fa9dd1fb8361948e2ee0
             <testcase name="DangXuat1" time="0.0" classname="RunTestCase.WorkFlow13">
           <skipped />
     </testcase>
+            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow13">
+          <skipped />
+    </testcase>
+            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow13">
+          <skipped />
+    </testcase>
             <testcase name="CreateTicketTest" time="0.0" classname="RunTestCase.WorkFlow13">
           <skipped />
     </testcase>
             <testcase name="ChuyenTiepTicket" time="0.0" classname="RunTestCase.WorkFlow13">
           <skipped />
     </testcase>
-            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow13">
-          <skipped />
-    </testcase>
             <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow13">
-          <skipped />
-    </testcase>
-            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow13">
           <skipped />
     </testcase>
             <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow13">

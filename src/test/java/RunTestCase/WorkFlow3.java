@@ -1,6 +1,7 @@
 package RunTestCase;
 
 import CSKH.DuyetTicketTraVe;
+import approval.CSKH.RandomCSKH;
 import locators.CSKHLocators;
 import login.LoginPage;
 import login.Logout;
@@ -30,7 +31,7 @@ public class WorkFlow3 {
     String IDTicket = null;
 
     @BeforeTest
-    public void setup() {
+    public void ChuanBi() {
         System.out.println("Tiến hành set up");
         System.out.println("------------------------------------------------");
         SetUp.setUp(driver);
@@ -38,17 +39,17 @@ public class WorkFlow3 {
     }
 
     @Test
-    public void LoginTest() throws InterruptedException {
+    public void DangNhapCSKH() throws InterruptedException {
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
         testCSKH.loginTest(driver);
     }
 
-    @Test(dependsOnMethods = "LoginTest")
+    @Test(dependsOnMethods = "DangNhapCSKH")
     public void CreateTicketTest() throws InterruptedException {
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

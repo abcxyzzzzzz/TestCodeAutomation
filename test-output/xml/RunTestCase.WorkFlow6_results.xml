@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sample Test Case"
+<testsuite name="Test Case 6"
            tests="8"
            failures="1"
            errors="0"
            skipped="6"
-           time="5.417">
+           time="39.195">
   <properties />
-            <testcase name="CreateTicketTest" time="0.000" classname="RunTestCase.WorkFlow6">
+            <testcase name="CreateTicketTest" time="33.343" classname="RunTestCase.WorkFlow6">
                 <failure type="org.openqa.selenium.NoSuchWindowException"
                   message="no such window: target window already closed
 from unknown error: web view not found
@@ -14,9 +14,9 @@ from unknown error: web view not found
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [616d0603c3ed33e115e8f7ff87983a40, findElement {using=xpath, value=//a[@href=&apos;/ticket-manager&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63545}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63545/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 616d0603c3ed33e115e8f7ff87983a40"
+Command: [98b41fdd5d1c8ff5921af94bf8fd861b, findElement {value=(//td[@data-pin=&apos;none&apos;])[7], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53675}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53675/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98b41fdd5d1c8ff5921af94bf8fd861b"
               >
 <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
@@ -24,9 +24,9 @@ from unknown error: web view not found
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [616d0603c3ed33e115e8f7ff87983a40, findElement {using=xpath, value=//a[@href='/ticket-manager']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63545}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63545/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 616d0603c3ed33e115e8f7ff87983a40
+Command: [98b41fdd5d1c8ff5921af94bf8fd861b, findElement {value=(//td[@data-pin='none'])[7], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53675}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53675/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98b41fdd5d1c8ff5921af94bf8fd861b
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -43,9 +43,9 @@ Session ID: 616d0603c3ed33e115e8f7ff87983a40
   org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
   org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  utils.TestUtils.clickElement(TestUtils.java:19)
-  CSKH.TestCSKH.createTicketTest(TestCSKH.java:43)
-  RunTestCase.WorkFlow6.CreateTicketTest(WorkFlow6.java:52)
+  utils.TestUtils.doubleClickElement(TestUtils.java:11)
+  CSKH.TestCSKH.SelectMaTicket(TestCSKH.java:68)
+  RunTestCase.WorkFlow6.CreateTicketTest(WorkFlow6.java:54)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -78,25 +78,25 @@ Session ID: 616d0603c3ed33e115e8f7ff87983a40
 
           </testcase>
   
-            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow6">
-          <skipped />
-    </testcase>
             <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow6">
-          <skipped />
-    </testcase>
-            <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow6">
           <skipped />
     </testcase>
             <testcase name="Login" time="0.0" classname="RunTestCase.WorkFlow6">
           <skipped />
     </testcase>
-            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow6">
+            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow6">
           <skipped />
     </testcase>
             <testcase name="ChuyenTiepTicket" time="0.0" classname="RunTestCase.WorkFlow6">
           <skipped />
     </testcase>
+            <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow6">
+          <skipped />
+    </testcase>
+            <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow6">
+          <skipped />
+    </testcase>
   
-            <testcase name="LoginTest" time="5.417" classname="RunTestCase.WorkFlow6" />
+            <testcase name="LoginTest" time="5.851" classname="RunTestCase.WorkFlow6" />
       
 </testsuite>

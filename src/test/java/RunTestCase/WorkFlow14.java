@@ -4,6 +4,7 @@ import CSKH.DuyetTicketTraVe;
 import locators.CSKHLocators;
 import login.LoginPage;
 import login.Logout;
+import approval.CSKH.RandomCSKH;
 import CSKH.TestCSKH;
 import TruongPhong.TestTruongPhongDien;
 import TruongPhong.TruongPhongDienDuyetTicket;
@@ -49,7 +50,7 @@ public class WorkFlow14 {
     public void CreateTicketTest() throws InterruptedException {
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

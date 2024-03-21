@@ -23,4 +23,5 @@ public class CSKHLocators {
     public static final By TIM_KIEM = By.xpath("//button[@class='btn-label btn btn-info btn-sm']");
     public static final By TIEP_NHAN_TRA_VE = By.xpath("//div[contains(text(),'Tiếp nhận')]");
     public static final By DOUBLE_CLICK_TABLE = By.xpath("(//td[@data-pin='none'])[7]");
+    public static final By Danh_sach_nguoi_lien_he_tao_ticket = By.xpath("(//input[contains(@placeholder,'...')])[10]");
 }

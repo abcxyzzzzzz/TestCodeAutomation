@@ -23,7 +23,7 @@ public class TestUtils {
         WebElement mauthongbao = driver.findElement(locator);
         mauthongbao.click();
         mauthongbao.sendKeys(text);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         mauthongbao.sendKeys(Keys.ENTER);
     }
 }
