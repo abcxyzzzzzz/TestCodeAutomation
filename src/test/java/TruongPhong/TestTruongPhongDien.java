@@ -1,8 +1,6 @@
 package TruongPhong;
 
-import approval.TruongPhongDien.XuLyCanDuyet;
-import approval.TruongPhongDien.XuLyKhongCanDuyet;
-import approval.TruongPhongDien.TuChoi;
+import approval.TruongPhongDien.XuLyTruongPhongDien;
 import locators.ElectricManager;
 import locators.PublicLocators;
 import login.LoginPage;
@@ -45,7 +43,7 @@ public class TestTruongPhongDien {
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        XuLyCanDuyet.XuLyCanDuyet(driver);
+        XuLyTruongPhongDien.XuLyCanDuyet(driver);
     }
     @Test(dependsOnMethods = "loginTest")
     public void CHuyenKhongCanDuyet(WebDriver driver, String MaTicket) throws InterruptedException {
@@ -60,7 +58,7 @@ public class TestTruongPhongDien {
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        XuLyKhongCanDuyet.XuKhongLyCanDuyet(driver);
+        XuLyTruongPhongDien.XuKhongLyCanDuyet(driver);
     }
     @Test(dependsOnMethods = "loginTest")
     public void TuChoi(WebDriver driver, String MaTicket) throws InterruptedException {
@@ -75,7 +73,7 @@ public class TestTruongPhongDien {
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        TuChoi.TuChoi(driver);
+        XuLyTruongPhongDien.TuChoi(driver);
     }
     @AfterTest
     public void tearDown() {

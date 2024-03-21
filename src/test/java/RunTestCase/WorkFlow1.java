@@ -20,7 +20,7 @@ import utils.TestUtils;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class LuongKhongCanDuyet {
+public class WorkFlow1 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
@@ -31,6 +31,7 @@ public class LuongKhongCanDuyet {
 
     @BeforeTest
     public void setup() {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành set up");
         System.out.println("------------------------------------------------");
         SetUp.setUp(driver);
@@ -39,6 +40,7 @@ public class LuongKhongCanDuyet {
 
     @Test
     public void LoginTest() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
         testCSKH.loginTest(driver);
@@ -46,6 +48,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "LoginTest")
     public void CreateTicketTest() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
         testCSKH.createTicketTest(driver);
@@ -54,6 +57,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "CreateTicketTest")
     public void Logout() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
         Logout.Logout(driver);
@@ -61,6 +65,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "Logout")
     public void LoginTruongPhongDien() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
         testTruongPhongDien.loginTest(driver);
@@ -68,6 +73,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "LoginTruongPhongDien")
     public void ChuyenTiepTicket() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành chuyển tiếp Ticket");
         System.out.println("------------------------------------------------");
         testTruongPhongDien.CHuyenKhongCanDuyet(driver, IDTicket);
@@ -75,6 +81,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "ChuyenTiepTicket")
     public void DangXuat() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
         Logout.Logout(driver);
@@ -82,6 +89,7 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "DangXuat")
     public void Login() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
         testNhanVienDien.loginTest(driver);
@@ -89,20 +97,47 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "Login")
     public void XuLyTicket() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành xử lý");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.NhanVienTiepNhan(driver,1, IDTicket);
+        testNhanVienDien.NhanVienTiepNhan(driver,2, IDTicket);
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
     public void DangXuat1() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
         Logout.Logout(driver);
     }
 
     @Test(dependsOnMethods = "DangXuat1")
+    public void LoginTruongPhongDien1() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành đăng nhập trưởng phòng điện");
+        System.out.println("------------------------------------------------");
+        testTruongPhongDien.loginTest(driver);
+    }
+
+    @Test(dependsOnMethods = "LoginTruongPhongDien1")
+    public void XuLyTicketTraVe() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành xử lý ticket");
+        System.out.println("------------------------------------------------");
+        truongPhongDienDuyetTicket.duyetTicket(driver, IDTicket);
+    }
+
+    @Test(dependsOnMethods = "XuLyTicketTraVe")
+    public void DangXuat2() throws InterruptedException {
+        System.out.println("------------------------------------------------");
+        System.out.println("Tiến hành đăng xuất");
+        System.out.println("------------------------------------------------");
+        Logout.Logout(driver);
+    }
+
+    @Test(dependsOnMethods = "DangXuat2")
     public void LoginCSKH1() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập CSKH");
         System.out.println("------------------------------------------------");
         testCSKH.loginTest(driver);
@@ -110,9 +145,12 @@ public class LuongKhongCanDuyet {
 
     @Test(dependsOnMethods = "LoginCSKH1")
     public void DuyetTraVeTicket() throws InterruptedException {
+        System.out.println("------------------------------------------------");
         System.out.println("Tiến hành duyệt");
         System.out.println("------------------------------------------------");
+        duyetTicketTraVe.DuyetTraVe(driver, IDTicket);
     }
+
     @AfterTest
     public void Close() {
         driver.quit();

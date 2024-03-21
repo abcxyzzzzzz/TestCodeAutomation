@@ -1,8 +1,9 @@
 package NhanVien;
 
+import approval.NhanVien.TuChoiYeuCau;
 import locators.ElectricManager;
 import locators.EmployssLocators;
-import approval.NhanVien.DongYYeuCau;
+import approval.NhanVien.NhanVienTiepNhanYeuCau;
 import locators.PublicLocators;
 import login.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +32,7 @@ public class TestNhanVienDien {
     }
 
     @Test(dependsOnMethods = "loginTest")
-    public void tiepNhanTicket(WebDriver driver, String MaTicket) throws InterruptedException {
+    public void NhanVienTiepNhan(WebDriver driver,int thuchien, String MaTicket) throws InterruptedException {
         TestUtils.clickElement(driver, EmployssLocators.YEU_CAU_DV_NV);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
         TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
@@ -39,10 +40,17 @@ public class TestNhanVienDien {
         TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
         Thread.sleep(2000);
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        DongYYeuCau.DongYYeuCau(driver);
-
+        NhanVienTiepNhanYeuCau.DongYYeuCau(driver,thuchien);
     }
-
+    public void tuChoiTicket(WebDriver driver, String MaTicket) throws InterruptedException {
+        TestUtils.clickElement(driver, EmployssLocators.YEU_CAU_DV_NV);
+        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        Thread.sleep(2000);
+        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        Thread.sleep(2000);
+        NhanVienTiepNhanYeuCau.TuChoiYeuCau(driver);
+    }
     @AfterTest
     public void finish() {
         driver.quit();

@@ -6,9 +6,20 @@
     </listeners>
     <test name="Sample Test Case">
         <classes>
-            <class name="RunTestCase.TestRunTestCase"/>
-            <class name="RunTestCase.LuongKhongCanDuyet"/>
-            <class name="RunTestCase.LuongTuChoi"/>
+            <class name="RunTestCase.WorkFlow1"/>
+            <class name="RunTestCase.WorkFlow2"/>
+            <class name="RunTestCase.WorkFlow3"/>
+            <class name="RunTestCase.WorkFlow4"/>
+            <class name="RunTestCase.WorkFlow5"/>
+            <class name="RunTestCase.WorkFlow6"/>
+            <class name="RunTestCase.WorkFlow7"/>
+            <class name="RunTestCase.WorkFlow8"/>
+            <class name="RunTestCase.WorkFlow9"/>
+            <class name="RunTestCase.WorkFlow10"/>
+            <class name="RunTestCase.WorkFlow11"/>
+            <class name="RunTestCase.WorkFlow12"/>
+            <class name="RunTestCase.WorkFlow13"/>
+            <class name="RunTestCase.WorkFlow14"/>
         </classes>
     </test>
 

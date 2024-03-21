@@ -91,7 +91,7 @@ public class TestRunTestCase {
     public void XuLyTicket() throws InterruptedException {
         System.out.println("Tiến hành xử lý");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.tiepNhanTicket(driver, IDTicket);
+        //testNhanVienDien.tiepNhanTicket(driver, IDTicket);
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
@@ -133,7 +133,7 @@ public class TestRunTestCase {
     public void DuyetTraVeTicket() throws InterruptedException {
         System.out.println("Tiến hành duyệt");
         System.out.println("------------------------------------------------");
-        duyetTicketTraVe.createTicketTest(driver, IDTicket);
+        duyetTicketTraVe.DuyetTraVe(driver, IDTicket);
     }
 
     @AfterTest

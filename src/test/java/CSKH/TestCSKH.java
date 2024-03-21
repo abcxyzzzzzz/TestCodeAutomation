@@ -1,5 +1,6 @@
 package CSKH;
 
+import approval.CSKH.RandomCSKH;
 import locators.CSKHLocators;
 import login.LoginPage;
 import org.openqa.selenium.By;
@@ -11,10 +12,14 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
 import login.Logout;
+
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class TestCSKH {
     WebDriver driver;
+    Random random;
+
 
     @BeforeTest
     public void setup() throws InterruptedException {
@@ -45,10 +50,10 @@ public class TestCSKH {
         Thread.sleep(1000);
         // Chọn đối tượng trong bảng
         TestUtils.doubleClickElement(driver, CSKHLocators.DATA_BANG);
-        TestUtils.fillInputField(driver, CSKHLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
-        TestUtils.fillInputField(driver, CSKHLocators.AGENT_NOTE_FIELD, "Nhanh nhất có thể nhé");
-        TestUtils.selectDropDow(driver, CSKHLocators.PRIORITY_SELECT, "Cao");
-        TestUtils.selectDropDow(driver, CSKHLocators.CATEGORIES_SELECT, "Yêu cầu");
+        TestUtils.fillInputField(driver, CSKHLocators.TICKET_CONTENT_FIELD, RandomCSKH.generateRandom());
+        TestUtils.fillInputField(driver, CSKHLocators.AGENT_NOTE_FIELD, RandomCSKH.generateRandomGhiChu());
+        TestUtils.selectDropDow(driver, CSKHLocators.PRIORITY_SELECT, RandomCSKH.generateRandomMucDo());
+        TestUtils.selectDropDow(driver, CSKHLocators.CATEGORIES_SELECT, RandomCSKH.generateRandomPhanLoai());
         TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DEPARTMENT, "PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
         TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DIVISION, "điện");
         TestUtils.selectDropDow(driver, CSKHLocators.SELECT_REQUEST_SERVICE, "Điện áp tăng cao");
