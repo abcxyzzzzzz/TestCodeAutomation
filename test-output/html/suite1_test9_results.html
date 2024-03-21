@@ -12,7 +12,7 @@
 <body>
 <h1>Test Case 9</h1>
 <p>
-  Test duration: 4.974s
+  Test duration: 25.390s
 </p>
 
 
@@ -25,25 +25,25 @@
             
 <tr>
   <td class="method">
-                  LoginTest
+                  CreateTicketTest
       </td>
   <td class="duration">
-    0.004s
+    10.393s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
-from unknown error: web view not found<br/>
-&nbsp; (Session info: chrome=122.0.6261.129)<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.ElementNotInteractableException: element not interactable<br/>
+&nbsp; (Session info: chrome=123.0.6312.58)<br/>
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
 Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [3e8ad0910e9970761daa275750d259d2, findElement {value=//input[@placeholder=&apos;Email&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53741}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53741/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: 3e8ad0910e9970761daa275750d259d2</b></a><br />
+Command: [67e34f2a58f5be158a6e0f7f1b48d61d, clickElement {id=f.86663BBC6AAB1CB98D71251859A2CC84.d.F219E38B92BB6D3F63E439165C6B5434.e.37}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63337/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Element: [[ChromeDriver: chrome on windows (67e34f2a58f5be158a6e0f7f1b48d61d)] -&gt; xpath: //span[contains(text(),&apos;Danh sách yêu cầu&apos;)]]<br/>
+Session ID: 67e34f2a58f5be158a6e0f7f1b48d61d</b></a><br />
     <div class="stackTrace" id="exception-0">
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
@@ -57,13 +57,11 @@ Session ID: 3e8ad0910e9970761daa275750d259d2</b></a><br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
               org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
-              login.LoginPage.login(LoginPage.java:14)<br />
-              CSKH.TestCSKH.loginTest(TestCSKH.java:28)<br />
-              RunTestCase.WorkFlow9.LoginTest(WorkFlow9.java:45)<br />
+              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)<br />
+              org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)<br />
+              utils.TestUtils.clickElement(TestUtils.java:19)<br />
+              CSKH.TestCSKH.createTicketTest(TestCSKH.java:39)<br />
+              RunTestCase.WorkFlow9.CreateTicketTest(WorkFlow9.java:52)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -112,22 +110,6 @@ Session ID: 3e8ad0910e9970761daa275750d259d2</b></a><br />
   <td class="result">
                              <i>Depends on method(s): </i>
         <span class="dependency">RunTestCase.WorkFlow9.LoginTruongPhongDien</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  CreateTicketTest
-      </td>
-  <td class="duration">
-    0.001s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow9.LoginTest</span>
                 
     
         
@@ -280,6 +262,27 @@ Session ID: 3e8ad0910e9970761daa275750d259d2</b></a><br />
 </tr>
       </table>
 
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">RunTestCase.WorkFlow9</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  LoginTest
+      </td>
+  <td class="duration">
+    6.673s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+      </table>
   
 </body>
 </html>

@@ -1,118 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Test Case 2"
            tests="14"
-           failures="1"
+           failures="0"
            errors="0"
-           skipped="12"
-           time="18.037">
+           skipped="0"
+           time="116.434">
   <properties />
-            <testcase name="TaoTicket" time="11.916" classname="RunTestCase.WorkFlow2">
-                <failure type="org.openqa.selenium.ElementClickInterceptedException"
-                  message="element click intercepted: Element &lt;input class=&quot;select2-selection__input&quot; autocapitalize=&quot;none&quot; autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; id=&quot;react-select-9-input&quot; spellcheck=&quot;false&quot; tabindex=&quot;0&quot; type=&quot;text&quot; aria-autocomplete=&quot;list&quot; aria-expanded=&quot;false&quot; aria-haspopup=&quot;true&quot; role=&quot;combobox&quot; value=&quot;&quot; style=&quot;color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;&quot;&gt; is not clickable at point (37, 782). Other element would receive the click: &lt;div class=&quot;modal fade show&quot; aria-modal=&quot;true&quot; role=&quot;dialog&quot; tabindex=&quot;-1&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=122.0.6261.129)
-Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e9aaac3a6a7572f7a065e65907f03ca2, clickElement {id=f.6D5760F1FDB34FF5FA90D231553B5126.d.E33F59B14244AD9CB653F765D36847EB.e.313}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53597/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e9aaac3a6a7572f7a065e65907f03ca2)] -&gt; xpath: //input[@id=&apos;react-select-9-input&apos;]]
-Session ID: e9aaac3a6a7572f7a065e65907f03ca2"
-              >
-<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="select2-selection__input" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-9-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"> is not clickable at point (37, 782). Other element would receive the click: <div class="modal fade show" aria-modal="true" role="dialog" tabindex="-1" style="display: block;">...</div>
-  (Session info: chrome=122.0.6261.129)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e9aaac3a6a7572f7a065e65907f03ca2, clickElement {id=f.6D5760F1FDB34FF5FA90D231553B5126.d.E33F59B14244AD9CB653F765D36847EB.e.313}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53597}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53597/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (e9aaac3a6a7572f7a065e65907f03ca2)] -> xpath: //input[@id='react-select-9-input']]
-Session ID: e9aaac3a6a7572f7a065e65907f03ca2
-  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-  java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
-  java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-  java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-  java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-  org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-  org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-  org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-  org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-  org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-  utils.TestUtils.selectDropDow(TestUtils.java:24)
-  CSKH.TestCSKH.createTicketTest(TestCSKH.java:52)
-  RunTestCase.WorkFlow2.TaoTicket(WorkFlow2.java:55)
-  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-  java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-  java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-  java.base/java.lang.reflect.Method.invoke(Method.java:564)
-  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
-  org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
-  org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-  org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-  org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
-  org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-  java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-  org.testng.TestRunner.privateRun(TestRunner.java:766)
-  org.testng.TestRunner.run(TestRunner.java:587)
-  org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-  org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-  org.testng.SuiteRunner.run(SuiteRunner.java:286)
-  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-  org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-  org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
-  org.testng.TestNG.runSuites(TestNG.java:1039)
-  org.testng.TestNG.run(TestNG.java:1007)
-  com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-  com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-]]>
-      </failure>
-
-          </testcase>
   
-            <testcase name="DangXuatTruongPhongDienLan2" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangXuatNhanVienDien" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangNhapCSKHLan2" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangNhapTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangNhapNhanVienDien" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DuyetTicketTraVe" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="ChuyenTicketChoNhanVien" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangNhapTruongPhongDienLan2" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="DangXuatTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
-            <testcase name="XuLyTicketNhanVienTraVe" time="0.0" classname="RunTestCase.WorkFlow2">
-          <skipped />
-    </testcase>
   
-            <testcase name="DangNhapCSKH" time="6.120" classname="RunTestCase.WorkFlow2" />
+            <testcase name="DangNhapCSKHLan2" time="6.759" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangNhapCSKH" time="6.143" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangXuatNhanVienDien" time="0.334" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangNhapTruongPhongDienLan2" time="6.687" classname="RunTestCase.WorkFlow2" />
+                <testcase name="TaoTicket" time="33.336" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangXuatTruongPhongDien" time="0.424" classname="RunTestCase.WorkFlow2" />
+                <testcase name="ChuyenTicketChoNhanVien" time="9.663" classname="RunTestCase.WorkFlow2" />
+                <testcase name="XuLyTicket" time="19.715" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangNhapNhanVienDien" time="6.740" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangXuatTruongPhongDienLan2" time="0.342" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DuyetTicketTraVe" time="8.364" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangXuat" time="0.344" classname="RunTestCase.WorkFlow2" />
+                <testcase name="XuLyTicketNhanVienTraVe" time="10.810" classname="RunTestCase.WorkFlow2" />
+                <testcase name="DangNhapTruongPhongDien" time="6.773" classname="RunTestCase.WorkFlow2" />
       
 </testsuite>

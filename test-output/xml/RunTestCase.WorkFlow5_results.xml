@@ -4,20 +4,20 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="99.224">
+           time="97.137">
   <properties />
   
   
-            <testcase name="LoginTest" time="5.884" classname="RunTestCase.WorkFlow5" />
-                <testcase name="DangXuat" time="0.360" classname="RunTestCase.WorkFlow5" />
-                <testcase name="XuLyTicket" time="19.899" classname="RunTestCase.WorkFlow5" />
-                <testcase name="LoginCSKH1" time="6.771" classname="RunTestCase.WorkFlow5" />
-                <testcase name="Login" time="6.733" classname="RunTestCase.WorkFlow5" />
-                <testcase name="DangXuat1" time="0.351" classname="RunTestCase.WorkFlow5" />
-                <testcase name="Logout" time="0.718" classname="RunTestCase.WorkFlow5" />
-                <testcase name="CreateTicketTest" time="33.370" classname="RunTestCase.WorkFlow5" />
-                <testcase name="DuyetTraVeTicket" time="8.463" classname="RunTestCase.WorkFlow5" />
-                <testcase name="LoginTruongPhongDien" time="6.806" classname="RunTestCase.WorkFlow5" />
-                <testcase name="ChuyenTiepTicket" time="9.869" classname="RunTestCase.WorkFlow5" />
+            <testcase name="DangXuat" time="0.340" classname="RunTestCase.WorkFlow5" />
+                <testcase name="LoginTruongPhongDien" time="6.710" classname="RunTestCase.WorkFlow5" />
+                <testcase name="XuLyTicket" time="19.637" classname="RunTestCase.WorkFlow5" />
+                <testcase name="LoginTest" time="5.921" classname="RunTestCase.WorkFlow5" />
+                <testcase name="CreateTicketTest" time="32.236" classname="RunTestCase.WorkFlow5" />
+                <testcase name="Login" time="6.667" classname="RunTestCase.WorkFlow5" />
+                <testcase name="Logout" time="0.566" classname="RunTestCase.WorkFlow5" />
+                <testcase name="DangXuat1" time="0.327" classname="RunTestCase.WorkFlow5" />
+                <testcase name="LoginCSKH1" time="6.668" classname="RunTestCase.WorkFlow5" />
+                <testcase name="ChuyenTiepTicket" time="9.750" classname="RunTestCase.WorkFlow5" />
+                <testcase name="DuyetTraVeTicket" time="8.315" classname="RunTestCase.WorkFlow5" />
       
 </testsuite>

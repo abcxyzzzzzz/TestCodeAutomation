@@ -12,7 +12,7 @@
 <body>
 <h1>Test Case 12</h1>
 <p>
-  Test duration: 1.005s
+  Test duration: 18.539s
 </p>
 
 
@@ -25,25 +25,26 @@
             
 <tr>
   <td class="method">
-                  LoginTest
+                  CreateTicketTest
       </td>
   <td class="duration">
-    0.006s
+    1.019s
   </td>
   <td class="result">
         
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed<br/>
-from unknown error: web view not found<br/>
-&nbsp; (Session info: chrome=122.0.6261.129)<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found<br/>
+&nbsp; (Session info: chrome=123.0.6312.58)<br/>
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception<br/>
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;<br/>
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;<br/>
 Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [5efbbff8acd22fe0cd9958a252c5bf4d, findElement {value=//input[@placeholder=&apos;Email&apos;], using=xpath}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53810}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53810/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: 5efbbff8acd22fe0cd9958a252c5bf4d</b></a><br />
+Command: [5175eae1bf5fbc6ca1c4a0525ecd35e7, clickElement {id=f.5541096A7EA4C6FCB99772407A57A2B4.d.9CD06F5C601E427A4E53539C1CA32CF0.e.68}]<br/>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63414}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63414/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
+Element: [[ChromeDriver: chrome on windows (5175eae1bf5fbc6ca1c4a0525ecd35e7)] -&gt; xpath: //a[@href=&apos;/ticket-manager&apos;]]<br/>
+Session ID: 5175eae1bf5fbc6ca1c4a0525ecd35e7</b></a><br />
     <div class="stackTrace" id="exception-0">
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)<br />
@@ -57,13 +58,11 @@ Session ID: 5efbbff8acd22fe0cd9958a252c5bf4d</b></a><br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
               org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
               org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)<br />
-              login.LoginPage.login(LoginPage.java:14)<br />
-              CSKH.TestCSKH.loginTest(TestCSKH.java:28)<br />
-              RunTestCase.WorkFlow12.LoginTest(WorkFlow12.java:46)<br />
+              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)<br />
+              org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)<br />
+              utils.TestUtils.clickElement(TestUtils.java:19)<br />
+              CSKH.TestCSKH.createTicketTest(TestCSKH.java:38)<br />
+              RunTestCase.WorkFlow12.CreateTicketTest(WorkFlow12.java:53)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -112,22 +111,6 @@ Session ID: 5efbbff8acd22fe0cd9958a252c5bf4d</b></a><br />
   <td class="result">
                              <i>Depends on method(s): </i>
         <span class="dependency">RunTestCase.WorkFlow12.LoginTruongPhongDien</span>
-                
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  CreateTicketTest
-      </td>
-  <td class="duration">
-    0.000s
-  </td>
-  <td class="result">
-                             <i>Depends on method(s): </i>
-        <span class="dependency">RunTestCase.WorkFlow12.LoginTest</span>
                 
     
         
@@ -264,6 +247,27 @@ Session ID: 5efbbff8acd22fe0cd9958a252c5bf4d</b></a><br />
 </tr>
       </table>
 
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">RunTestCase.WorkFlow12</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  LoginTest
+      </td>
+  <td class="duration">
+    5.902s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+      </table>
   
 </body>
 </html>

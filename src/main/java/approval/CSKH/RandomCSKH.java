@@ -133,7 +133,6 @@ public class RandomCSKH {
         String[] words = {
                 "Sang",
                 "Linh",
-                "Phương",
                 "Hoa"
         };
         StringBuilder sb = new StringBuilder();
