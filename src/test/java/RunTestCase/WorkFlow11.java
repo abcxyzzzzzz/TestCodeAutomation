@@ -5,6 +5,8 @@ import locators.CSKHLocators;
 import login.LoginPage;
 import login.Logout;
 import CSKH.TestCSKH;
+import approval.CSKH.RandomCSKH;
+
 import TruongPhong.TestTruongPhongDien;
 import TruongPhong.TruongPhongDienDuyetTicket;
 import NhanVien.TestNhanVienDien;
@@ -51,7 +53,7 @@ public class WorkFlow11 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

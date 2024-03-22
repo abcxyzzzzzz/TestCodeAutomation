@@ -5,6 +5,7 @@ import CSKH.TestCSKH;
 import NhanVien.TestNhanVienDien;
 import TruongPhong.TestTruongPhongDien;
 import TruongPhong.TruongPhongDienDuyetTicket;
+import approval.CSKH.RandomCSKH;
 import login.Logout;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -46,7 +47,7 @@ public class WorkFlow4 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

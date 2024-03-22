@@ -10,6 +10,7 @@ import TruongPhong.TruongPhongDienDuyetTicket;
 import NhanVien.TestNhanVienDien;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import approval.CSKH.RandomCSKH;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -48,7 +49,7 @@ public class WorkFlow8 {
     public void CreateTicketTest() throws InterruptedException {
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver);
+        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         IDTicket = TestCSKH.SelectMaTicket(driver);
     }
 

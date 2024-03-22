@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Sample Test Case"
+<testsuite name="Test Case 12"
            tests="11"
            failures="1"
            errors="0"
-           skipped="10"
-           time="0.004">
+           skipped="9"
+           time="6.921">
   <properties />
-            <testcase name="LoginTest" time="0.004" classname="RunTestCase.WorkFlow12">
-                <failure type="org.openqa.selenium.NoSuchWindowException"
-                  message="no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.129)
+            <testcase name="CreateTicketTest" time="1.019" classname="RunTestCase.WorkFlow12">
+                <failure type="org.openqa.selenium.StaleElementReferenceException"
+                  message="stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7a8b247b73eaee7987dc38294bfed4d5, findElement {using=xpath, value=//input[@placeholder=&apos;Email&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63694}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63694/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7a8b247b73eaee7987dc38294bfed4d5"
+Command: [5175eae1bf5fbc6ca1c4a0525ecd35e7, clickElement {id=f.5541096A7EA4C6FCB99772407A57A2B4.d.9CD06F5C601E427A4E53539C1CA32CF0.e.68}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63414}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63414/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5175eae1bf5fbc6ca1c4a0525ecd35e7)] -&gt; xpath: //a[@href=&apos;/ticket-manager&apos;]]
+Session ID: 5175eae1bf5fbc6ca1c4a0525ecd35e7"
               >
-<![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=122.0.6261.129)
+<![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=123.0.6312.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.18.1', revision: 'b1d3319b48'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7a8b247b73eaee7987dc38294bfed4d5, findElement {using=xpath, value=//input[@placeholder='Email']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.129, chrome: {chromedriverVersion: 122.0.6261.128 (f18a44fedeb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63694}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63694/devtoo..., se:cdpVersion: 122.0.6261.129, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7a8b247b73eaee7987dc38294bfed4d5
+Command: [5175eae1bf5fbc6ca1c4a0525ecd35e7, clickElement {id=f.5541096A7EA4C6FCB99772407A57A2B4.d.9CD06F5C601E427A4E53539C1CA32CF0.e.68}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.58, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\nhokt\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63414}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63414/devtoo..., se:cdpVersion: 123.0.6312.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (5175eae1bf5fbc6ca1c4a0525ecd35e7)] -> xpath: //a[@href='/ticket-manager']]
+Session ID: 5175eae1bf5fbc6ca1c4a0525ecd35e7
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -39,13 +41,11 @@ Session ID: 7a8b247b73eaee7987dc38294bfed4d5
   org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
   org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
   org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-  org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-  org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-  login.LoginPage.login(LoginPage.java:13)
-  CSKH.TestCSKH.loginTest(TestCSKH.java:33)
-  RunTestCase.WorkFlow12.LoginTest(WorkFlow12.java:44)
+  org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+  org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+  utils.TestUtils.clickElement(TestUtils.java:19)
+  CSKH.TestCSKH.createTicketTest(TestCSKH.java:38)
+  RunTestCase.WorkFlow12.CreateTicketTest(WorkFlow12.java:53)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
   java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -81,22 +81,19 @@ Session ID: 7a8b247b73eaee7987dc38294bfed4d5
             <testcase name="Login" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
-            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow12">
-          <skipped />
-    </testcase>
-            <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow12">
-          <skipped />
-    </testcase>
             <testcase name="Logout" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
-            <testcase name="CreateTicketTest" time="0.0" classname="RunTestCase.WorkFlow12">
+            <testcase name="DangXuat" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
             <testcase name="ChuyenTiepTicket" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
-            <testcase name="LoginTruongPhongDien1" time="0.0" classname="RunTestCase.WorkFlow12">
+            <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow12">
+          <skipped />
+    </testcase>
+            <testcase name="LoginTruongPhongDien" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
             <testcase name="XuLyTicketTraVe" time="0.0" classname="RunTestCase.WorkFlow12">
@@ -105,9 +102,10 @@ Session ID: 7a8b247b73eaee7987dc38294bfed4d5
             <testcase name="DangXuat1" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
-            <testcase name="XuLyTicket" time="0.0" classname="RunTestCase.WorkFlow12">
+            <testcase name="LoginTruongPhongDien1" time="0.0" classname="RunTestCase.WorkFlow12">
           <skipped />
     </testcase>
   
-  
+            <testcase name="LoginTest" time="5.902" classname="RunTestCase.WorkFlow12" />
+      
 </testsuite>
