@@ -19,19 +19,6 @@ import approval.CSKH.TiepNhanTicketTuChoi;
 import java.util.concurrent.TimeUnit;
 
 public class DuyetTicketTraVe {
-    WebDriver driver;
-    @BeforeTest
-    public void setup() {
-        driver = new ChromeDriver();
-        SetUp.setUp(driver);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    @Test
-    public void loginTest(WebDriver driver) throws InterruptedException {
-        LoginPage.login(driver,"nhanviencskh@qtsc.com.vn", "nhanviencskh");
-    }
-    @Test(dependsOnMethods = "loginTest")
     public void DuyetTraVe(WebDriver driver, String MaTicket) throws InterruptedException {
         TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
         TestUtils.clickElement(driver, CSKHLocators.TICKET_CUA_TOI_CSKH);
@@ -64,9 +51,5 @@ public class DuyetTicketTraVe {
         TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
         Thread.sleep(1000);
         TiepNhanTicketTuChoi.TiepNhanTicketTuChoi(driver);
-    }
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
     }
 }

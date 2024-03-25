@@ -1,35 +1,28 @@
 package RunTestCase;
 
 import CSKH.DuyetTicketTraVe;
-import locators.CSKHLocators;
-import login.LoginPage;
-import login.Logout;
 import CSKH.TestCSKH;
 import TruongPhong.TestTruongPhongDien;
-import TruongPhong.TruongPhongDienDuyetTicket;
 import NhanVien.TestNhanVienDien;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.IDataProviderAnnotation;
 import org.testng.annotations.Test;
 import setup.SetUp;
 import approval.CSKH.RandomCSKH;
+import login.LoginPage;
 
-
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow6 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
-    TruongPhongDienDuyetTicket truongPhongDienDuyetTicket = new TruongPhongDienDuyetTicket();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
     String IDTicket = null;
+    String sheetLogin = "Sheet1";
 
     @BeforeTest
     public void setup() {
@@ -40,10 +33,10 @@ public class WorkFlow6 {
     }
 
     @Test
-    public void LoginTest() throws InterruptedException {
+    public void LoginTest() throws Exception {
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
-        testCSKH.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,1);
     }
 
     @Test(dependsOnMethods = "LoginTest")
@@ -58,14 +51,14 @@ public class WorkFlow6 {
     public void Logout() throws InterruptedException {
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
+        LoginPage.Logout(driver);
     }
 
     @Test(dependsOnMethods = "Logout")
-    public void LoginTruongPhongDien() throws InterruptedException {
+    public void LoginTruongPhongDien() throws Exception {
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        testTruongPhongDien.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,2);
     }
 
     @Test(dependsOnMethods = "LoginTruongPhongDien")
@@ -79,14 +72,14 @@ public class WorkFlow6 {
     public void DangXuat() throws InterruptedException {
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
+        LoginPage.Logout(driver);
     }
 
     @Test(dependsOnMethods = "DangXuat")
-    public void Login() throws InterruptedException {
+    public void Login() throws Exception {
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,3);
     }
 
     @Test(dependsOnMethods = "Login")

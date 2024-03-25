@@ -4,8 +4,7 @@ import CSKH.DuyetTicketTraVe;
 import CSKH.TestCSKH;
 import NhanVien.TestNhanVienDien;
 import TruongPhong.TestTruongPhongDien;
-import TruongPhong.TruongPhongDienDuyetTicket;
-import login.Logout;
+import login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -14,16 +13,17 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import approval.CSKH.RandomCSKH;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow5 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
-    TruongPhongDienDuyetTicket truongPhongDienDuyetTicket = new TruongPhongDienDuyetTicket();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
     String IDTicket = null;
+    String sheetLogin = "Sheet1";
 
     @BeforeTest
     public void setup() {
@@ -35,11 +35,11 @@ public class WorkFlow5 {
     }
 
     @Test
-    public void LoginTest() throws InterruptedException {
+    public void LoginTest() throws Exception {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
-        testCSKH.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,1);
     }
 
     @Test(dependsOnMethods = "LoginTest")
@@ -56,15 +56,15 @@ public class WorkFlow5 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
+        LoginPage.Logout(driver);
     }
 
     @Test(dependsOnMethods = "Logout")
-    public void LoginTruongPhongDien() throws InterruptedException {
+    public void LoginTruongPhongDien() throws Exception {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        testTruongPhongDien.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,2);
     }
 
     @Test(dependsOnMethods = "LoginTruongPhongDien")
@@ -80,15 +80,15 @@ public class WorkFlow5 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
+        LoginPage.Logout(driver);
     }
 
     @Test(dependsOnMethods = "DangXuat")
-    public void Login() throws InterruptedException {
+    public void Login() throws Exception {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,3);
     }
 
     @Test(dependsOnMethods = "Login")
@@ -104,15 +104,15 @@ public class WorkFlow5 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng xuất");
         System.out.println("------------------------------------------------");
-        Logout.Logout(driver);
+        LoginPage.Logout(driver);
     }
 
     @Test(dependsOnMethods = "DangXuat1")
-    public void LoginCSKH1() throws InterruptedException {
+    public void LoginCSKH1() throws Exception {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập CSKH");
         System.out.println("------------------------------------------------");
-        testCSKH.loginTest(driver);
+        LoginPage.login(driver,sheetLogin,1);
     }
 
     @Test(dependsOnMethods = "LoginCSKH1")

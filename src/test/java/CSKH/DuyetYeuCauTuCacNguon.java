@@ -15,24 +15,7 @@ import utils.TestUtils;
 import java.util.concurrent.TimeUnit;
 
 public class DuyetYeuCauTuCacNguon {
-
-    WebDriver driver;
-
-    @BeforeTest
-    public void setup() {
-        driver = new ChromeDriver();
-        SetUp.setUp(driver);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    @Test
-    public void loginTest() throws InterruptedException {
-        LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
-        Thread.sleep(4000);
-    }
-
-    @Test(dependsOnMethods = "loginTest")
-    public void createTicketTest() throws InterruptedException {
+    public void createTicketTest(WebDriver driver) throws InterruptedException {
         TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
         TestUtils.clickElement(driver, ReceivingRequests.YEU_CAU_CHO_TIEP_NHAN);
         String textKiemTra = "Tạo mới";
@@ -40,7 +23,6 @@ public class DuyetYeuCauTuCacNguon {
         Assert.assertEquals(getText, textKiemTra);
         TestUtils.doubleClickElement(driver, ReceivingRequests.CLICK_DATA_TABLE);
         TestUtils.clickElement(driver, ReceivingRequests.TIEP_NHAN_YEU_CAU);
-
         Thread.sleep(1000);
         driver.navigate().refresh();
         TestUtils.fillInputField(driver, CSKHLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
@@ -52,15 +34,9 @@ public class DuyetYeuCauTuCacNguon {
         TestUtils.selectDropDow(driver, CSKHLocators.SELECT_REQUEST_SERVICE, "Điện áp tăng cao");
         TestUtils.clickElement(driver, CSKHLocators.CREATE_TICKET_BUTTON);
         Thread.sleep(2000);
-
         // Chuyển tiếp
         TestUtils.clickElement(driver, CSKHLocators.SAVE_FORWARD_BUTTON);
         Thread.sleep(4000);
 
-    }
-
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
     }
 }

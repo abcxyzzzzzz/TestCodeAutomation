@@ -1,5 +1,6 @@
 package utils;
 
+import exel.ExcelHelpers;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -25,5 +26,10 @@ public class TestUtils {
         mauthongbao.sendKeys(text);
         Thread.sleep(2000);
         mauthongbao.sendKeys(Keys.ENTER);
+    }
+    public static String SetText(String nameSheet, String tenCot, int soHangCanLay) throws Exception {
+        ExcelHelpers excelHelper = new ExcelHelpers();
+        excelHelper.setExcelFile("src/test/resources/Book1.xlsx", nameSheet);
+        return excelHelper.getCellData(tenCot, soHangCanLay);
     }
 }

@@ -17,28 +17,13 @@ import setup.SetUp;
 import utils.TestUtils;
 
 public class QuanLyCongTy {
-    WebDriver driver;
     Random random;
-
-    @BeforeTest
-    public void setup() {
-        driver = new ChromeDriver();
-        SetUp.setUp(driver);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-
-    @Test
-    public void loginTest() throws InterruptedException {
-        LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
-    }
-
-    @Test(dependsOnMethods = "loginTest")
-    public void taoCongTy() throws InterruptedException {
+    public void taoCongTy(WebDriver driver) throws InterruptedException {
 
         driver.findElement(CustomerManagement.QLKH).click();
         driver.findElement(CustomerManagement.QLCT).click();
         driver.findElement(CustomerManagement.TAO_MOI_CONG_TY).click();
-        ChonToaNhaDaiDien();
+        ChonToaNhaDaiDien(driver);
         // Chọn phân loại doanh nghệp
         TestUtils.selectDropDow(driver, InputForm.INPUT_LOAI_DOANH_NGHEP, "Trong nước");
         // driver.findElement(InputForm.BUTTON_SAVE).click();
@@ -46,7 +31,7 @@ public class QuanLyCongTy {
         // driver.findElement(InputForm.BUTTON_CLOSE).click();
     }
 
-    public void ChonToaNhaDaiDien() throws InterruptedException {
+    public void ChonToaNhaDaiDien(WebDriver driver) throws InterruptedException {
         // Chọn tòa nhà đại diện
         String text_CTY = generateRandomCompanyName();
         String getText = driver.findElement(CSKHLocators.DATA_TEN_CONG_TY).getText().trim();
@@ -81,11 +66,5 @@ public class QuanLyCongTy {
             sb.append(" ");
         }
         return sb.toString().trim();
-    }
-
-    @AfterTest
-    public void finish() {
-
-        // driver.quit();
     }
 }
