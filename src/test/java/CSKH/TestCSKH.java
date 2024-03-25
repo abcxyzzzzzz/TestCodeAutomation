@@ -3,37 +3,14 @@ package CSKH;
 import approval.CSKH.RandomCSKH;
 import locators.CSKHLocators;
 import login.LoginPage;
-import net.datafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import setup.SetUp;
 import utils.TestUtils;
-import login.Logout;
+
 import java.util.concurrent.TimeUnit;
 
 public class TestCSKH {
-    WebDriver driver;
-    @BeforeTest
-    public void setup() throws Exception {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-    }
-
-    @Test()
-    public void loginTest(WebDriver driver) throws InterruptedException {
-        LoginPage.login(driver, "nhanviencskh@qtsc.com.vn", "nhanviencskh");
-    }
-
-    @Test(dependsOnMethods = "loginTest")
-    public void logout() throws InterruptedException {
-        Logout.Logout(driver);
-    }
-
-    @Test(dependsOnMethods = "loginTest")
     public void createTicketTest(WebDriver driver, String Ten_nguoi_lien_he) throws InterruptedException {
         TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
         TestUtils.clickElement(driver, CSKHLocators.REQUEST_LIST);
@@ -69,10 +46,5 @@ public class TestCSKH {
         driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
         String MaTicket = driver.findElement(By.xpath("(//td[@data-pin='none'])[101]")).getText().trim();
         return MaTicket;
-    }
-
-    @AfterTest
-    public void tearDown() {
-        // driver.quit();
     }
 }

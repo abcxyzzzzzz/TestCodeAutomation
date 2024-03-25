@@ -11,5 +11,6 @@ public class SetUp {
         WebDriverManager.chromedriver().setup();
         driver.manage().window().maximize();
         driver.get("https://crm-dev.lsat.vn/login");
+        driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
     }
 }
