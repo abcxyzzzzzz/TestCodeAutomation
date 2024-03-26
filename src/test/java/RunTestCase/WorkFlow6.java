@@ -13,6 +13,8 @@ import setup.SetUp;
 import approval.CSKH.RandomCSKH;
 import login.LoginPage;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow6 {
@@ -20,6 +22,7 @@ public class WorkFlow6 {
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
     String IDTicket = null;
     String sheetLogin = "Sheet1";
@@ -43,8 +46,8 @@ public class WorkFlow6 {
     public void CreateTicketTest() throws InterruptedException {
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-        IDTicket = TestCSKH.SelectMaTicket(driver);
+        testCSKH.createTicketTest(driver, time);
+        IDTicket = TestCSKH.SelectMaTicket(driver, time);
     }
 
     @Test(dependsOnMethods = "CreateTicketTest")

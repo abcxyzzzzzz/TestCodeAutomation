@@ -14,11 +14,14 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow3 {
     WebDriver driver = new ChromeDriver();
     TestCSKH testCSKH = new TestCSKH();
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
@@ -44,8 +47,8 @@ public class WorkFlow3 {
     public void CreateTicketTest() throws InterruptedException {
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-        IDTicket = TestCSKH.SelectMaTicket(driver);
+        testCSKH.createTicketTest(driver, time);
+        IDTicket = TestCSKH.SelectMaTicket(driver, time);
     }
 
     @Test(dependsOnMethods = "CreateTicketTest")

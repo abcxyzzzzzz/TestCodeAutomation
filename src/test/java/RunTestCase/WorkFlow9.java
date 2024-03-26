@@ -14,6 +14,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow9 {
@@ -22,6 +24,7 @@ public class WorkFlow9 {
    TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
    TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
    DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
+   String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
    String IDTicket = null;
    String sheetLogin = "Sheet1";
 
@@ -44,8 +47,8 @@ public class WorkFlow9 {
    public void CreateTicketTest() throws InterruptedException {
        System.out.println("Tiến hành tạo ticket");
        System.out.println("------------------------------------------------");
-       testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-       IDTicket = TestCSKH.SelectMaTicket(driver);
+       testCSKH.createTicketTest(driver, time);
+       IDTicket = TestCSKH.SelectMaTicket(driver, time);
    }
 
    @Test(dependsOnMethods = "CreateTicketTest")

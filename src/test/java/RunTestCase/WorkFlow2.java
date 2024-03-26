@@ -14,6 +14,8 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow2 {
@@ -22,6 +24,7 @@ public class WorkFlow2 {
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     String IDTicket = null;
     String sheetLogin = "Sheet1";
 
@@ -47,8 +50,8 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-        IDTicket = TestCSKH.SelectMaTicket(driver);
+        testCSKH.createTicketTest(driver, time);
+        IDTicket = TestCSKH.SelectMaTicket(driver, time);
     }
 
     @Test(dependsOnMethods = "TaoTicket")

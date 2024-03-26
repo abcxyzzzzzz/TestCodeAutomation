@@ -5,14 +5,23 @@ import CSKH.TestCSKH;
 import TruongPhong.TestTruongPhongDien;
 import NhanVien.TestNhanVienDien;
 import login.LoginPage;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import setup.SetUp;
 import approval.CSKH.RandomCSKH;
+import utils.TestUtils;
 
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow1 {
@@ -23,6 +32,8 @@ public class WorkFlow1 {
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
     String IDTicket = null;
     String sheetLogin = "Sheet1";
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
+
     @BeforeTest
     public void ChuanBi() {
         System.out.println("------------------------------------------------");
@@ -44,8 +55,8 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-        IDTicket = TestCSKH.SelectMaTicket(driver);
+        testCSKH.createTicketTest(driver, time);
+        IDTicket = TestCSKH.SelectMaTicket(driver, time);
     }
 
     @Test(dependsOnMethods = "TaoTicket")
@@ -85,7 +96,7 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,1);
+        LoginPage.login(driver,sheetLogin,3);
     }
 
     @Test(dependsOnMethods = "DangNhapNhanVienDien")
@@ -143,9 +154,12 @@ public class WorkFlow1 {
         System.out.println("------------------------------------------------");
         duyetTicketTraVe.DuyetTraVe(driver, IDTicket);
     }
-
+    @AfterMethod
+    public void Capture(ITestResult result) throws InterruptedException {
+        TestUtils.takeScreenshot(driver,result);
+    }
     @AfterTest
-    public void Close() {
+    public void Close()  {
         driver.quit();
     }
 
