@@ -1,5 +1,6 @@
 package CSKH;
 
+import approval.CSKH.RandomCSKH;
 import locators.CSKHLocators;
 import locators.ReceivingRequests;
 import login.LoginPage;
@@ -15,28 +16,49 @@ import utils.TestUtils;
 import java.util.concurrent.TimeUnit;
 
 public class DuyetYeuCauTuCacNguon {
-    public void createTicketTest(WebDriver driver) throws InterruptedException {
-        TestUtils.clickElement(driver, CSKHLocators.TICKET_MANAGER_LINK);
-        TestUtils.clickElement(driver, ReceivingRequests.YEU_CAU_CHO_TIEP_NHAN);
+    public void createTicketTest(WebDriver driver, String timeString) throws InterruptedException {
+        TestUtils.clickElement(driver, CSKHLocators.QuanLy);
+        TestUtils.clickElement(driver, ReceivingRequests.YeuCauDoi);
         String textKiemTra = "Tạo mới";
-        String getText = driver.findElement(ReceivingRequests.KIEM_TRA_TRANG_THAI_YEU_CAU).getText().trim();
+        String getText = driver.findElement(ReceivingRequests.KiemTraTrangThai).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        TestUtils.doubleClickElement(driver, ReceivingRequests.CLICK_DATA_TABLE);
-        TestUtils.clickElement(driver, ReceivingRequests.TIEP_NHAN_YEU_CAU);
+        TestUtils.doubleClickElement(driver, ReceivingRequests.ChonBang);
+        TestUtils.clickElement(driver, ReceivingRequests.TiepNhan);
         Thread.sleep(1000);
         driver.navigate().refresh();
-        TestUtils.fillInputField(driver, CSKHLocators.TICKET_CONTENT_FIELD, "Sửa chữa hệ thống điện trường học");
-        TestUtils.fillInputField(driver, CSKHLocators.AGENT_NOTE_FIELD, "Nhanh nhất có thể nhé");
-        TestUtils.selectDropDow(driver, CSKHLocators.PRIORITY_SELECT, "Cao");
-        TestUtils.selectDropDow(driver, CSKHLocators.CATEGORIES_SELECT, "Yêu cầu");
-        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DEPARTMENT, "PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
-        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DIVISION, "điện");
-        TestUtils.selectDropDow(driver, CSKHLocators.SELECT_REQUEST_SERVICE, "Điện áp tăng cao");
-        TestUtils.clickElement(driver, CSKHLocators.CREATE_TICKET_BUTTON);
+        Thread.sleep(1000);
+        TestUtils.clickElement(driver, CSKHLocators.TimKiem);
+        Thread.sleep(1000);
+        // Chọn đối tượng trong bảng
+        TestUtils.fillInputField(driver, CSKHLocators.NguoiLienHeTaoTicket, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
         Thread.sleep(2000);
-        // Chuyển tiếp
-        TestUtils.clickElement(driver, CSKHLocators.SAVE_FORWARD_BUTTON);
+        TestUtils.doubleClickElement(driver, CSKHLocators.DuLieuBang);
+        TestUtils.fillInputField(driver, CSKHLocators.NoiDungTicket, RandomCSKH.generateRandom());
+        TestUtils.fillInputField(driver, CSKHLocators.NoiDungGhiChu, RandomCSKH.generateRandomGhiChu());
+        TestUtils.selectDropDow(driver, CSKHLocators.MucDoTicket, RandomCSKH.generateRandomMucDo());
+        TestUtils.selectDropDow(driver, CSKHLocators.PhanLoaiTicket, RandomCSKH.generateRandomPhanLoai());
+        TestUtils.selectDropDow(driver, CSKHLocators.PhongBan, "PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
+        TestUtils.selectDropDow(driver, CSKHLocators.BoPhan, "điện");
+        TestUtils.selectDropDow(driver, CSKHLocators.YCDichVu, "Điện áp tăng cao");
+        TestUtils.clickElement(driver, CSKHLocators.TaoTicket);
         Thread.sleep(4000);
+        String textNull = driver.findElement(CSKHLocators.KiemTraND).getText().trim();
+        String textNull2 = driver.findElement(CSKHLocators.KiemTraTruongPhong).getText().trim();
+        String textNull3 = driver.findElement(CSKHLocators.KiemTraBoPhan).getText().trim();
+        if (textNull.isEmpty()) {
+            TestUtils.fillInputField(driver, CSKHLocators.NoiDungTicket, timeString);
+        }else{
+            TestUtils.clickElement(driver, CSKHLocators.LuuTicket);
+            Thread.sleep(10000);
+        }
+//        if (textNull2.isEmpty()) {
+//            TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DEPARTMENT, "PKTDN - PHÒNG KỸ THUẬT ĐIỆN NƯỚC");
+//        }if (textNull3.isEmpty()) {
+//            TestUtils.selectDropDow(driver, CSKHLocators.SELECT_DIVISION, "điện");
+//            TestUtils.selectDropDow(driver, CSKHLocators.SELECT_REQUEST_SERVICE, "Điện áp tăng cao");
+//        }
+//        TestUtils.clickElement(driver, CSKHLocators.CREATE_TICKET_BUTTON);
+//        Thread.sleep(4000);
 
     }
 }

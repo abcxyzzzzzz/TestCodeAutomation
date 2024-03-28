@@ -1,4 +1,4 @@
-package QuanLyKhachHang;
+package CSKH;
 
 import locators.CSKHLocators;
 import locators.CustomerManagement;
@@ -18,14 +18,15 @@ import utils.TestUtils;
 
 public class QuanLyCongTy {
     Random random;
+
     public void taoCongTy(WebDriver driver) throws InterruptedException {
 
-        driver.findElement(CustomerManagement.QLKH).click();
-        driver.findElement(CustomerManagement.QLCT).click();
-        driver.findElement(CustomerManagement.TAO_MOI_CONG_TY).click();
+        driver.findElement(CustomerManagement.QuanLyKhachHang).click();
+        driver.findElement(CustomerManagement.QuanLyCongTy).click();
+        driver.findElement(CustomerManagement.TaoMoi).click();
         ChonToaNhaDaiDien(driver);
         // Chọn phân loại doanh nghệp
-        TestUtils.selectDropDow(driver, InputForm.INPUT_LOAI_DOANH_NGHEP, "Trong nước");
+        TestUtils.selectDropDow(driver, InputForm.LoaiDoanhNghiep, "Trong nước");
         // driver.findElement(InputForm.BUTTON_SAVE).click();
         Thread.sleep(1000);
         // driver.findElement(InputForm.BUTTON_CLOSE).click();
@@ -34,16 +35,16 @@ public class QuanLyCongTy {
     public void ChonToaNhaDaiDien(WebDriver driver) throws InterruptedException {
         // Chọn tòa nhà đại diện
         String text_CTY = generateRandomCompanyName();
-        String getText = driver.findElement(CSKHLocators.DATA_TEN_CONG_TY).getText().trim();
+        String getText = driver.findElement(CSKHLocators.TenCongTy).getText().trim();
         Assert.assertNotEquals(getText, text_CTY);
-        TestUtils.fillInputField(driver, InputForm.INPUT_TEN_CONG_TY, text_CTY);
-        TestUtils.fillInputField(driver, InputForm.INPUT_TEN_VIET_TAT, "nhà báo Việt Nam");
-        TestUtils.selectDropDow(driver, InputForm.INPUT_TOA_NHA_DAI_DIEN, "Trường mầm non Quang Trung");
-        TestUtils.fillInputField(driver, InputForm.INPUT_DIA_CHI_VAN_PHONG, "456 Phan Xích Long");
-        TestUtils.fillInputField(driver, InputForm.INPUT_DIA_CHI_TANG, "Tầng 9");
-        TestUtils.fillInputField(driver, InputForm.INPUT_DIA_CHI_PHONG, "123");
-        TestUtils.fillInputField(driver, InputForm.INPUT_EMAIL, generateRandomEmail());
-        TestUtils.fillInputField(driver, InputForm.INPUT_SDT, generateRandomPhoneNumber());
+        TestUtils.fillInputField(driver, InputForm.TenCongTy, text_CTY);
+        TestUtils.fillInputField(driver, InputForm.TenVietTat, "nhà báo Việt Nam");
+        TestUtils.selectDropDow(driver, InputForm.ToaNhaDaiDien, "Trường mầm non Quang Trung");
+        TestUtils.fillInputField(driver, InputForm.DiaChiVanPhong, "456 Phan Xích Long");
+        TestUtils.fillInputField(driver, InputForm.DiaChiTang, "Tầng 9");
+        TestUtils.fillInputField(driver, InputForm.DiaChiPhong, "123");
+        TestUtils.fillInputField(driver, InputForm.Email, generateRandomEmail());
+        TestUtils.fillInputField(driver, InputForm.SDT, generateRandomPhoneNumber());
     }
 
     public String generateRandomEmail() {

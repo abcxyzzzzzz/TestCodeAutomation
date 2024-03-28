@@ -1,7 +1,5 @@
 package TruongPhong;
 
-import approval.TruongPhongDien.DuyetTicketTraVe;
-import approval.TruongPhongDien.XuLyTruongPhongDien;
 import locators.ElectricManager;
 import locators.PublicLocators;
 import login.LoginPage;
@@ -18,72 +16,95 @@ import java.util.concurrent.TimeUnit;
 
 public class TestTruongPhongDien {
     public void chuyenTiepTickket(WebDriver driver, String MaTicket) throws InterruptedException {
-        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.clickElement(driver, ElectricManager.YCDichVu);
+        TestUtils.clickElement(driver, PublicLocators.TicKetCuaToi);
         // Kiểm tra trạng thái ticket
         String textKiemTra = "Đã chuyển tiếp";
-        String getText = driver.findElement(ElectricManager.KIEM_TRA_TRANG_THAI).getText().trim();
+        String getText = driver.findElement(ElectricManager.KiemTraTrangThai).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        TestUtils.fillInputField(driver, ElectricManager.Nhap, MaTicket);
         Thread.sleep(2000);
-        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.HanhDong);
         Thread.sleep(2000);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        XuLyTruongPhongDien.XuLyCanDuyet(driver);
+        TestUtils.clickElement(driver, PublicLocators.ChuyenNhanVien);
+        TestUtils.clickElement(driver, PublicLocators.CanDuyet);
+        TestUtils.selectDropDow(driver, ElectricManager.NhanVienThucHien,"Nhân viên điện");
+        TestUtils.fillInputField(driver,PublicLocators.LyDo,"Công việc bạn có thể thực hiện được");
+        Thread.sleep(2000);
+        TestUtils.clickElement(driver,PublicLocators.XacNhan);
+        Thread.sleep(5000);
     }
+
     @Test(dependsOnMethods = "loginTest")
     public void CHuyenKhongCanDuyet(WebDriver driver, String MaTicket) throws InterruptedException {
-        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.clickElement(driver, ElectricManager.YCDichVu);
+        TestUtils.clickElement(driver, PublicLocators.TicKetCuaToi);
         // Kiểm tra trạng thái ticket
         String textKiemTra = "Đã chuyển tiếp";
-        String getText = driver.findElement(ElectricManager.KIEM_TRA_TRANG_THAI).getText().trim();
+        String getText = driver.findElement(ElectricManager.KiemTraTrangThai).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        TestUtils.fillInputField(driver, ElectricManager.Nhap, MaTicket);
         Thread.sleep(2000);
-        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.HanhDong);
         Thread.sleep(2000);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        XuLyTruongPhongDien.XuKhongLyCanDuyet(driver);
+        TestUtils.clickElement(driver, PublicLocators.ChuyenNhanVien);
+        TestUtils.clickElement(driver, ElectricManager.KhongCanDuyet);
+        TestUtils.selectDropDow(driver,ElectricManager.NhanVienThucHien,"Nhân viên điện" );
+        TestUtils.fillInputField(driver, PublicLocators.LyDo,"Công việc bạn có thể thực hiện được");
+        Thread.sleep(5000);
+        TestUtils.clickElement(driver,PublicLocators.XacNhan);
+
     }
+
     @Test(dependsOnMethods = "loginTest")
     public void TuChoi(WebDriver driver, String MaTicket) throws InterruptedException {
-        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
+        TestUtils.clickElement(driver, ElectricManager.YCDichVu);
+        TestUtils.clickElement(driver, PublicLocators.TicKetCuaToi);
         // Kiểm tra trạng thái ticket
         String textKiemTra = "Đã chuyển tiếp";
-        String getText = driver.findElement(ElectricManager.KIEM_TRA_TRANG_THAI).getText().trim();
+        String getText = driver.findElement(ElectricManager.KiemTraTrangThai).getText().trim();
         Assert.assertEquals(getText, textKiemTra);
-        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        TestUtils.fillInputField(driver, ElectricManager.Nhap, MaTicket);
         Thread.sleep(2000);
-        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.HanhDong);
         Thread.sleep(2000);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CHUYEN_NHAN_VIEN);
-        XuLyTruongPhongDien.TuChoi(driver);
+        TestUtils.clickElement(driver, PublicLocators.ChuyenNhanVien);
+        TestUtils.clickElement(driver, ElectricManager.TuChoi);
+        TestUtils.fillInputField(driver, PublicLocators.LyDo,"Tôi không có nhân viên nào có thể thực hiện yêu cầu này");
+        Thread.sleep(5000);
+        TestUtils.clickElement(driver,PublicLocators.XacNhan);
     }
-    //Duyệt ticket nhaan viên trả về
+
+    // Duyệt ticket nhaan viên trả về
     public void duyetTicket(WebDriver driver, String MaTicket) throws InterruptedException {
-        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
-        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        TestUtils.clickElement(driver, ElectricManager.YCDichVu);
+        TestUtils.clickElement(driver, PublicLocators.TicKetCuaToi);
+        TestUtils.fillInputField(driver, ElectricManager.Nhap, MaTicket);
         Thread.sleep(2000);
-        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.HanhDong);
         Thread.sleep(2000);
-        driver.findElement(PublicLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        driver.findElement(PublicLocators.ChuyenNhanVien).click();
         // Xử lý
-        DuyetTicketTraVe.DuyetTicketTraVe(driver);
+        TestUtils.clickElement(driver, ElectricManager.DuyetTraVe);
+        TestUtils.fillInputField(driver, PublicLocators.LyDo, "Đã xử lý");
+        Thread.sleep(2000);
+        driver.findElement(PublicLocators.XacNhan).click();
         Thread.sleep(4000);
     }
+
     public void tuChoiDuyetTicket(WebDriver driver, String MaTicket) throws InterruptedException {
-        TestUtils.clickElement(driver, ElectricManager.YEU_CAU_DICH_VU);
-        TestUtils.clickElement(driver, PublicLocators.TICKET_CUA_TOI);
-        TestUtils.fillInputField(driver, ElectricManager.IN_PUT, MaTicket);
+        TestUtils.clickElement(driver, ElectricManager.YCDichVu);
+        TestUtils.clickElement(driver, PublicLocators.TicKetCuaToi);
+        TestUtils.fillInputField(driver, ElectricManager.Nhap, MaTicket);
         Thread.sleep(2000);
-        TestUtils.doubleClickElement(driver, PublicLocators.TICKET_HANH_DONG);
+        TestUtils.doubleClickElement(driver, PublicLocators.HanhDong);
         Thread.sleep(2000);
-        driver.findElement(PublicLocators.TICKET_CHUYEN_NHAN_VIEN).click();
+        driver.findElement(PublicLocators.ChuyenNhanVien).click();
         // Xử lý
-        DuyetTicketTraVe.TuChoiDuyetTicKetTraVe(driver);
+        TestUtils.clickElement(driver, ElectricManager.TuChoiTraVe);
+        TestUtils.fillInputField(driver, PublicLocators.LyDo, "Công việc bạn không thể thực hiện được");
+        Thread.sleep(2000);
+        driver.findElement(PublicLocators.XacNhan).click();
         Thread.sleep(4000);
     }
 }

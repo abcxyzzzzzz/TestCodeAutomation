@@ -14,6 +14,9 @@ import org.testng.annotations.Test;
 import setup.SetUp;
 import utils.TestUtils;
 
+import java.awt.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class WorkFlow2 {
@@ -22,6 +25,7 @@ public class WorkFlow2 {
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
     String IDTicket = null;
     String sheetLogin = "Sheet1";
 
@@ -39,7 +43,7 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,1);
+        LoginPage.login(driver, sheetLogin, 1);
     }
 
     @Test(dependsOnMethods = "DangNhapCSKH")
@@ -47,8 +51,8 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành tạo ticket");
         System.out.println("------------------------------------------------");
-        testCSKH.createTicketTest(driver, RandomCSKH.Random_nguoi_lien_he_tao_ticket());
-        IDTicket = TestCSKH.SelectMaTicket(driver);
+        testCSKH.createTicketTest(driver, time);
+        IDTicket = TestCSKH.SelectMaTicket(driver, time);
     }
 
     @Test(dependsOnMethods = "TaoTicket")
@@ -64,7 +68,7 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,2);
+        LoginPage.login(driver, sheetLogin, 2);
     }
 
     @Test(dependsOnMethods = "DangNhapTruongPhongDien")
@@ -88,15 +92,15 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,3);
+        LoginPage.login(driver, sheetLogin, 3);
     }
 
     @Test(dependsOnMethods = "DangNhapNhanVienDien")
-    public void XuLyTicket() throws InterruptedException {
+    public void XuLyTicket() throws InterruptedException, AWTException {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành xử lý");
         System.out.println("------------------------------------------------");
-        testNhanVienDien.NhanVienTiepNhan(driver,2, IDTicket);
+        testNhanVienDien.NhanVienTiepNhan(driver, 2, IDTicket);
     }
 
     @Test(dependsOnMethods = "XuLyTicket")
@@ -112,7 +116,7 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,2);
+        LoginPage.login(driver, sheetLogin, 2);
     }
 
     @Test(dependsOnMethods = "DangNhapTruongPhongDienLan2")
@@ -136,7 +140,7 @@ public class WorkFlow2 {
         System.out.println("------------------------------------------------");
         System.out.println("Tiến hành đăng nhập CSKH");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,1);
+        LoginPage.login(driver, sheetLogin, 1);
     }
 
     @Test(dependsOnMethods = "DangNhapCSKHLan2")
