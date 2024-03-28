@@ -8,6 +8,9 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -64,6 +67,24 @@ public class TestUtils {
                 System.out.println("Exception while taking screenshot " + e.getMessage());
             }
         }
+    }
+    public static void uploadImages(WebDriver driver, String pathImages,String locator) throws InterruptedException, AWTException {
+        driver.findElement(By.xpath(locator)).click();;
+        Thread.sleep(1000);
+        // Tạo một chuỗi chứa đường dẫn của tệp ảnh cần tải lên
+        StringSelection ss = new StringSelection(pathImages);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        // Khởi tạo đối tượng Robot
+        Robot robot = new Robot();
+        // Dán đường dẫn tệp vào hộp thoại chọn tệp
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        // Nhấn Enter để xác nhận việc chọn tệp
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+        Thread.sleep(2000);
     }
 
 }

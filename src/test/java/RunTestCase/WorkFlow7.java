@@ -13,6 +13,7 @@ import setup.SetUp;
 import approval.CSKH.RandomCSKH;
 import login.LoginPage;
 
+import java.awt.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
@@ -86,7 +87,7 @@ public class WorkFlow7 {
     }
 
    @Test(dependsOnMethods = "Login")
-   public void XuLyTicket() throws InterruptedException {
+   public void XuLyTicket() throws InterruptedException, AWTException {
        System.out.println("Tiến hành xử lý");
        System.out.println("------------------------------------------------");
        testNhanVienDien.NhanVienTiepNhan(driver,2, IDTicket);

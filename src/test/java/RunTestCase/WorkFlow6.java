@@ -22,7 +22,7 @@ public class WorkFlow6 {
     TestCSKH testCSKH = new TestCSKH();
     TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
     TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
-    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"));
     DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
     String IDTicket = null;
     String sheetLogin = "Sheet1";
@@ -39,7 +39,7 @@ public class WorkFlow6 {
     public void LoginTest() throws Exception {
         System.out.println("Tiến hành đăng nhập ");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,1);
+        LoginPage.login(driver, sheetLogin, 1);
     }
 
     @Test(dependsOnMethods = "LoginTest")
@@ -61,7 +61,7 @@ public class WorkFlow6 {
     public void LoginTruongPhongDien() throws Exception {
         System.out.println("Tiến hành đăng nhập trưởng phòng điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,2);
+        LoginPage.login(driver, sheetLogin, 2);
     }
 
     @Test(dependsOnMethods = "LoginTruongPhongDien")
@@ -82,7 +82,7 @@ public class WorkFlow6 {
     public void Login() throws Exception {
         System.out.println("Tiến hành đăng nhập nhân viên điện");
         System.out.println("------------------------------------------------");
-        LoginPage.login(driver,sheetLogin,3);
+        LoginPage.login(driver, sheetLogin, 3);
     }
 
     @Test(dependsOnMethods = "Login")

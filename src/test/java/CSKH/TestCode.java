@@ -3,7 +3,7 @@ package CSKH;
 import exel.ExcelHelpers;
 
 
-public class testsheet {
+public class TestCode {
     public static void main(String[] args) {
         try {
             // Tạo một đối tượng ExcelHelpers

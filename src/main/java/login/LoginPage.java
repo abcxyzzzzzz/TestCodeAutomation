@@ -16,7 +16,7 @@ public class LoginPage {
         WebElement passwordField = driver.findElement(By.xpath("//input[@placeholder='Mật khẩu']"));
         passwordField.sendKeys(passWord);
         driver.findElement(By.xpath("//button[@type='button']")).click();
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         String currentUrl = driver.getCurrentUrl();
         if (currentUrl.equals("https://crm-dev.lsat.vn/dashboard")) {
             System.out.println("Đăng nhập thành công, đã chuyển hướng đến trang Dashboard.");
