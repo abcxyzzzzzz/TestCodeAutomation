@@ -11,4 +11,5 @@ public class EmployssLocators {
     public static final By UpdateSauXuLy  = By.xpath("//button[contains(text(),'Cập nhật kết quả sau khi xử lý')]");
     public static final By KhongTheXuLy  = By.xpath("//div[contains(text(),'Không thể xử lý')]");
     public static final By CoTheXuLy  = By.xpath("//div[contains(text(),'Xử lý thành công')]");
+    public static final By KiemTraTrangThai  = By.xpath("(//td[@data-pin='none'])[9]");
 }

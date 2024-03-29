@@ -25,13 +25,6 @@ public class NhanVienTiepNhanYeuCau {
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (27).jpg","(//div[@role='presentation'])[1]");
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (28).jpg","(//div[@role='presentation'])[1]");
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (29).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (30).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (31).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (32).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (33).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (34).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (35).jpg","(//div[@role='presentation'])[1]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (36).jpg","(//div[@role='presentation'])[1]");
         TestUtils.clickElement(driver, EmployssLocators.UpdateTruocXuLy);
         Thread.sleep(5000);
         TestUtils.fillInputField(driver,EmployssLocators.SauXuLy,"Kết quả sau khi thực hiện hành động");
@@ -39,14 +32,6 @@ public class NhanVienTiepNhanYeuCau {
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (24).jpg","(//div[@role='presentation'])[2]");
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (23).jpg","(//div[@role='presentation'])[2]");
         TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (22).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (21).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (20).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (19).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (18).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (17).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (16).jpg","(//div[@role='presentation'])[2]");
-        TestUtils.uploadImages(driver,"D:\\Tuyên\\Memes\\2 (15).jpg","(//div[@role='presentation'])[2]");
-
         Thread.sleep(5000);
         TestUtils.clickElement(driver, EmployssLocators.UpdateSauXuLy);
         Thread.sleep(4000);

@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class WorkFlow11 {
    WebDriver driver = new ChromeDriver();
    TestCSKH testCSKH = new TestCSKH();
+
    TestTruongPhongDien testTruongPhongDien = new TestTruongPhongDien();
    TestNhanVienDien testNhanVienDien = new TestNhanVienDien();
    DuyetTicketTraVe duyetTicketTraVe = new DuyetTicketTraVe();
